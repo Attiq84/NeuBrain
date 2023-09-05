@@ -1,0 +1,166 @@
+<div class="ph-bg">
+    <div class="page-width">
+       {%- if section.settings.title != blank -%}
+    <div class="se-header">
+      <h2 class="section-header__title">{{ section.settings.title }}</h2>
+    </div>
+  {%- endif -%}
+     
+      <div class="arrow">&#8594;</div>
+      <div class="slider-container">  
+        <div class="left-column">
+          <p class="slider-heading">Attiq Ur Rehma</p>
+          <p class="slider-description">Description</p>
+        </div>
+      
+        <div class="slider">
+          <div class="slide">
+            <h3 class="placeholder-heading">Lewis Hamilton</h3>
+            <p class="placeholder-paragraph">”I’ve been drinking AG1 every single day for a few years and it’s become a key part of my routine. As a daily clean, green source of energy - it tastes great, is convenient to take on the road, and is complete enough to be an all-in-one supplement. I love that it’s a really easy way to improve my overall health.”</p>
+            <img class="placeholder-image" src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Photo_Apr_14_2023__3_19_23_AM.png?v=1686309978">
+          </div>
+          <div class="slide">
+            <h3 class="placeholder-heading">Mark Hyman</h3>
+            <p class="placeholder-paragraph">“It’s really one supplement that covers so many bases and you’d be hard-pressed to find something else this comprehensive in one place.”</p>
+            <img class="placeholder-image" src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Photo_Apr_14_2023__3_15_01_AM.png?v=1686309954">
+          </div>
+          <div class="slide">
+            <h3 class="placeholder-heading">Dr. Andrew Huberman</h3>
+            <p class="placeholder-paragraph">“I’ve been using AG1 since 2012 because it’s the simplest, most straightforward way for me to get my basis of important vitamins, minerals, and probiotics.”</p>
+            <img class="placeholder-image" src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Photo_Apr_14_2023__3_19_23_AM.png?v=1686309978">
+          </div>
+          <div class="slide">
+            <h3 class="placeholder-heading">Usama Haider</h3>
+            <p class="placeholder-paragraph">"I’m always looking for ways to level up and improve my performance. Taking AG1 allows me to keep up with the daily hustle that being a new Mom, busy executive, and athlete requires. I have more energy and recover faster after a tough workout because of this product..."</p>
+            <img class="placeholder-image" src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Photo_Apr_14_2023__3_19_23_AM.png?v=1686309978">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% schema %}
+  {
+    "name": "image slider",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Slider",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+   /* Slider Container */
+     .slider-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    /* Slider */
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    /* Slide */
+    .slide {
+      flex: 0 0 40%;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+	
+	
+    
+    /* Heading */
+    .slider-heading {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    
+    /* Left Column */
+    .left-column {
+      flex: 0 0 25%;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-radius: 5px;
+      z-index: 50;
+    }
+      
+    /* Left Arrow */
+    .arrow {
+      float: right;
+      transform: translateY(-100%);
+      cursor: pointer;
+      color: #000;
+      font-size: 30px;
+    }
+    
+    /* Placeholder Image */
+    .placeholder-image {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  
+    
+    /* Hide overflow */
+    .image-column img {
+      overflow: hidden;
+    }
+    
+   .se-header {
+    text-align: center;
+}
+h3.placeholder-heading {
+    display: none;
+}
+    p.placeholder-paragraph {
+    display: none;
+}
+  </style>
+  <script>
+    // Slide the slider to the left
+    function slideLeft() {
+      const slider = document.querySelector('.slider');
+      slider.appendChild(slider.firstElementChild);
+      
+      const currentSlide = document.querySelector('.slide');
+      const currentHeading = currentSlide.querySelector('.placeholder-heading').textContent;
+      const currentDescription = currentSlide.querySelector('.placeholder-paragraph').textContent;
+    
+      const leftColumn = document.querySelector('.left-column');
+      leftColumn.querySelector('.slider-heading').textContent = currentHeading;
+      leftColumn.querySelector('.slider-description').textContent = currentDescription;
+      
+      const imageColumns = document.querySelectorAll('.image-column');
+      const nextImageIndex = (Array.from(imageColumns).findIndex((col) => col.querySelector('img').src === currentSlide.querySelector('img').src) + 1) % imageColumns.length;
+      const nextImage = imageColumns[nextImageIndex].querySelector('img');
+      imageColumns.forEach((col) => col.style.display = 'none');
+      imageColumns[nextImageIndex].style.display = 'block';
+      
+      const nearestImage = document.querySelector('.nearest-image');
+      nearestImage.classList.add('nearest-image');
+      nextImage.classList.add('nearest-image');
+    }
+    
+    // Add event listener to the left arrow
+    const leftArrow = document.querySelector('.arrow');
+    leftArrow.addEventListener('click', slideLeft);
+  </script>

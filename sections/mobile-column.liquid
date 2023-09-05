@@ -1,0 +1,165 @@
+<div class="mobile-sec">
+
+<div class="page-width">
+   {%- if section.settings.title != blank -%}
+    <div class="section-header">
+      <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
+    </div>
+   <p class="sub-title">{{ section.settings.title2 | escape }}</p>
+  {%- endif -%}
+{%- for block in section.blocks -%}
+        <div class="new-col-w" {{ block.shopify_attributes }}>
+          <div class="ne-di">
+          {%- if block.settings.image != blank -%}
+            {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="new lazyload"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720]"
+                data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                data-sizes="auto"
+                alt="{{ block.settings.image.alt }}">
+          {%- else -%}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        <span class="col-tx"> <h3>{{ block.settings.title | escape }}</h3></span>
+          </div>
+      <span class="paragr-1"> <p>{{ block.settings.text-1 | escape }}</p></span>
+          {%- if block.settings.button_label != blank -%}
+          <a href="{{ block.settings.button_link }}" class="btn">
+            {{ block.settings.button_label }}
+          </a>
+            {%- endif -%}
+        </div>
+    
+      
+      {%- endfor -%}
+</div>
+
+</div>
+{% schema %}
+  {
+    "name": "mobile column",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "title2",
+        "label": "sub Heading"
+      }
+    ],
+     "blocks": [
+      {
+        "type": "logo_image",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "heading"
+          },
+          {
+            "id": "text-1",
+            "type": "text",
+            "label": "Text",
+            "default": "Describe a product"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label",
+            "default": "Optional button"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Mobile column",
+        "blocks": [
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .mobile-sec{
+    display:none;
+  }
+  @media only screen and (max-width: 600px){
+.mobile-sec{
+    display:block;
+  }
+  img.new.lazyautosizes.lazyloaded {
+    width: 20%;
+    margin-left: -1px;
+}
+    .ne-di {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #48D8F2 0.83%, #589FDC 55.66%, #6A3FCD 101.73%);
+border-radius: 50px;
+      margin-bottom: 30px;
+}
+    span.col-tx h3 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0px 20px;
+}
+    .new-col-w {
+    padding: 20px;
+}
+}
+  @media only screen and (max-width:768px) and (min-width: 601px) 
+{
+     img.new.lazyautosizes.lazyloaded {
+    width: 10%;
+    margin-left: -1px;
+} 
+  .mobile-sec{
+    display:block;
+  }
+   .ne-di {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #48D8F2 0.83%, #589FDC 55.66%, #6A3FCD 101.73%);
+border-radius: 50px;
+      margin-bottom: 30px;
+}
+     span.col-tx h3 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0px 20px;
+}
+    .new-col-w {
+    padding: 20px;
+}
+    }
+</style>

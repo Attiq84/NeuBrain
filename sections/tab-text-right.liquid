@@ -1,0 +1,346 @@
+<div class="tab-col">
+<div class="page-width">
+  <div class="tab-di">
+<div class="tab-customize  new">
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-111')" id="tab-cus-active" >Functional Mushroom Blend </button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-222')">Nootropic Complex</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-333')">Prebiotics</button>
+  
+</div>
+<!-- Tab content -->
+<div id="tab-111" class="tabcontent-cus">
+  {{ section.settings.title-1 }}
+</div>
+<div id="tab-222" class="tabcontent-cus">
+  {{ section.settings.title-2 }}
+</div>
+<div id="tab-333" class="tabcontent-cus">
+  {{ section.settings.title-3 }}
+</div>
+  </div>
+  <p id="imageText" class="btn rigt-tnt">Supplement Facts</p>
+  <div class="popup" id="imagePopup">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+</div>
+</div>
+{% schema %}
+    {
+    "name": "tabs text right",
+    "settings": [
+      {
+            "type": "richtext",
+            "id": "title-1",
+            "label": "para-1",
+            "default": "<p>Rich text</p>"
+      },
+      {
+            "type": "richtext",
+            "id": "title-2",
+            "label": "para-2",
+            "default": "<p>Rich text</p>"
+          },
+      {
+            "type": "richtext",
+            "id": "title-3",
+            "label": "para-3",
+            "default": "<p>Rich text</p>"
+          }
+    ],
+    "presets": [
+      {
+        "name": "tabs text right"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  .tab-di {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  .tab-customize.new {
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    padding: 0px 50px;
+}
+  button.tablinks-cus {
+    text-align: left;
+    font-size:31px;
+    color:white;
+    display:flex;
+    align-items: center;
+}
+  div#tab-111 {
+    width: 50%;
+    color: #ffffff;
+    position: relative;
+    left: 30px;
+}
+  div#tab-222 {
+    width: 50%;
+    color: #ffffff;
+    position: relative;
+    left: 30px;
+}
+  div#tab-333 {
+    width: 50%;
+    color: #ffffff;
+    position: relative;
+    left: 30px;
+}
+  button.tablinks-cus:after {
+    content: "+";
+    display: inline-block;
+    font: 14px/1 FontAwesome;
+    font-size: 20px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    vertical-align: top;
+    font-weight: bold;
+  border:2px solid;
+    border-radius: 50%;
+    padding: 3px 7px 3px 7px;
+    color:white;
+    margin-left: 10px;
+}
+  .tabcontent-cus:before{
+      content: "\2713";
+    display: flex;
+    font: 14px/1 FontAwesome;
+    font-size:18px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    vertical-align: top;
+  border:1px solid;
+    border-radius: 50%;
+    padding: 3px 6px 3px 6px;
+    color:white;
+    position: absolute;
+    left:-35px;
+  }
+    button.tablinks-cus.active {
+    color: #0051ff;
+}
+  button.tablinks-cus.active:after{
+     color: #0051ff;
+  }
+  .tab-col {
+    background:linear-gradient(90deg, rgb(75,216,249) 0%, rgb(87,162,221) 35%, rgb(62,157,236) 100%);
+    padding: 40px 20px;
+}
+  @media only screen and (max-width: 768px){
+    p#imageText {
+    width: 60%;
+    margin-top: 30px;
+}
+  .tab-customize.new{
+    display:block;
+    padding:0px;
+    width:100%;
+    margin-bottom:30px;
+  }
+    button.tablinks-cus{
+      font-size:17px;
+    }
+    button.tablinks-cus:after{
+      font-size:12px;
+      border:1px solid;
+      padding:3px 5px 3px 5px;
+      margin-left:5px;
+    }
+    .tab-di{
+      display:block;
+    }
+    div#tab-111{
+      width:100%;
+      font-size: 12px;
+    }
+    div#tab-222{
+      width:100%;
+      font-size: 12px;
+    }
+    div#tab-333{
+      width:100%;
+      font-size: 12px;
+    }
+    .tabcontent-cus:before{
+      font-size:11px;
+      
+    }
+  }
+  .popup {
+    overflow:auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s;
+    }
+
+    .popup.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup-content {
+      width:50%;
+      margin:auto;
+      position: relative;
+      border-radius: 5px;
+      
+    }
+
+    .popup-close {
+       position: absolute;
+      top: 5px;
+      margin-left:20px;
+      cursor: pointer;
+      font-size: 60px;
+      color:#139ED9;
+    }
+  img.ne-pop {
+    border-radius: 30px;
+}
+   p#imageText {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+}
+   @media only screen and (max-width:825px) and (min-width:769px){
+      
+     .tab-customize.new{
+       width:100%;
+     }
+     p#imageText {
+    width: 50%;
+    margin-top: 30px;
+}
+  .tab-customize.new{
+    display:block;
+    padding:0px;
+    width:100%;
+    margin-bottom:30px;
+  }
+    button.tablinks-cus{
+      font-size:17px;
+    }
+    button.tablinks-cus:after{
+      font-size:12px;
+      border:1px solid;
+      padding:3px 5px 3px 5px;
+      margin-left:5px;
+    }
+    .tab-di{
+      display:block;
+    }
+    div#tab-111{
+      width:100%;
+      font-size: 12px;
+    }
+    div#tab-222{
+      width:100%;
+      font-size: 12px;
+    }
+    div#tab-333{
+      width:100%;
+      font-size: 12px;
+    }
+    .tabcontent-cus:before{
+      font-size:11px; 
+    }
+
+  img.ne-pop {
+    border-radius: 30px;
+}  
+   } 
+    @media only screen and (max-width: 825px){
+      p#imageText {
+    width: 90%;
+    margin: auto;
+}
+      }
+  @media only screen and (max-width: 600px){
+.popup-close{
+  top:15px;
+      font-size: 30px;
+   }
+    .popup-content {
+      width:100%;
+      margin-top: 50%;
+    }
+}
+ @media only screen and (max-width: 825px) and (min-width: 601px) {
+      .popup-content{
+        width:95%;
+        margin-top: 18%;
+      }
+     .popup-close{
+     top:25px;
+      font-size: 40px;
+   }
+   } 
+  @media only screen and (max-width: 2840px) and (min-width: 2341px){
+    .popup-content {
+      width:37%;
+      margin:auto;
+    }
+</style>
+
+
+<script>
+function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent-cus");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks-cus");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("tab-cus-active").click();
+</script>
+<script>
+    // Get the text, popup element, and close button
+    const text = document.getElementById('imageText');
+    const popup = document.getElementById('imagePopup');
+    const closeButton = popup.querySelector('.popup-close');
+
+    // Show the popup when the text is clicked
+    text.addEventListener('click', () => {
+      popup.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup.addEventListener('click', (event) => {
+      if (event.target === popup || event.target === closeButton) {
+        popup.classList.remove('show');
+      }
+    });
+  </script>

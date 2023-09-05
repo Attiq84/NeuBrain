@@ -1,0 +1,104 @@
+<section class="health_experts">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" style="text-align: center;">
+        <div class="health_experts_head">
+          <h3>{{ section.settings.health_experts_heading }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme " id="owl-demo-2">
+
+      {% for block in section.blocks %}
+    <div class="row row_flex item">
+      <div class="col-sm-6">
+        <div class="robert_k_image">
+          <img src="{{  block.settings.health_experts-image | img_url: 'master' }}">
+          <div class="author_bottom_info">
+            <div class="author_name_slide">{{ block.settings.health_experts-title }}</div>
+            <p>{{ block.settings.health_experts-sub-title }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="robert_k_content">
+          <h4>{{ block.settings.health_experts-title }}</h4>
+          <p>{{ block.settings.health_experts-paragraph }}</p>
+
+          <div class="robert_last_text">
+            <p>{{ block.settings.health_last-paragraph }}</p>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+   {% endfor %}
+    
+  </div>
+      </div>
+</section>
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Waitlist Health Experts",
+        "settings": [
+          {
+          "type": "text",
+          "id": "health_experts_heading",
+          "label": "Add Health Experts Heading"
+          } 
+        ],
+    
+   
+     "blocks":[
+      {
+        "type": "health_experts_slider",
+        "name": "Health Experts",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "health_experts-image",
+            "label": "Upload Image"
+          },
+          {
+          "type": "text",
+          "id": "health_experts-title",
+          "label": "Add Title"
+          },
+          {
+          "type": "text",
+          "id": "health_experts-sub-title",
+          "label": "Add Sub Title"
+          },
+          {
+            "type": "richtext",
+            "id": "health_experts-paragraph",
+            "label": "Add Paragraph"
+          },
+          {
+            "type": "richtext",
+            "id": "health_last-paragraph",
+            "label": "Add Blue Paragraph"
+          }
+  ]
+      }
+  ],
+   "presets": [{
+    "name": "Waitlist Health Experts",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

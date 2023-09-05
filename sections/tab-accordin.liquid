@@ -1,0 +1,99 @@
+
+<div class="page-width">
+  <div class="cen-n">
+<div class="tab-customize">
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-1')" id="tab-cus-active" >Functional Mushroom Blend</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-2')">Nootropic Complex</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-3')">Prebiotics </button>
+</div>
+<!-- Tab content -->
+<div id="tab-1" class="tabcontent-cus">
+  {{ section.settings.title-1 }}
+</div>
+<div id="tab-2" class="tabcontent-cus ">
+  {{ section.settings.title-2 }}
+</div>
+<div id="tab-3" class="tabcontent-cus ">
+  {{ section.settings.title-3 }}
+</div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "Tabs accordian",
+     "class": "index-section",
+    "settings": [
+      {
+            "type": "richtext",
+            "id": "title-1",
+            "label": "para-1",
+            "default": "<p>Rich text</p>"
+      },
+      {
+            "type": "richtext",
+            "id": "title-2",
+            "label": "para-2",
+            "default": "<p>Rich text</p>"
+          },
+      {
+            "type": "richtext",
+            "id": "title-3",
+            "label": "para-3",
+            "default": "<p>Rich text</p>"
+          }
+    ],
+    "presets": [
+      {
+        "name": "tabs accordian"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<style>
+.tab-customize {
+  overflow: hidden;
+  margin:auto;
+  width:70%;
+}
+.tab-customize button {
+  background-color:#fff;
+  border-radius: 10px 1px 17px 0px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.tab-customize button:hover {
+  background-color: #ddd;
+}
+.tab-customize button.active {
+  background-color: #00C2CC;
+}
+.tabcontent-cus {
+  display: none;
+  padding: 40px 25px;
+  border-top: none;
+   background: #fff;
+  border-radius:10px;
+}
+
+  .cen-n {
+    width: 70%;
+    margin: auto;
+   
+    border-radius: 10px;
+}
+  @media only screen and (max-width: 767px){
+  .cen-n   {width:100%;}
+    .tab-customize{
+      width:100%;
+    }
+    .tab-customize button{
+      width:100%;
+    }
+  }
+</style>

@@ -1,0 +1,363 @@
+{%- style -%}
+  @media screen and (max-width: 768px) {
+    .background-media-text--{{ section.id }} {
+      background-image: url({{ section.settings.image | img_url: '1x1' }});
+    }
+  }
+{%- endstyle -%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="background-image"
+  class="background-media-text background-media-text--{{ section.id }} background-media-text--{{ section.settings.height }} loaded"
+  data-aos="background-media-text__animation"
+  {% if section.settings.parallax %}data-parallax="true"{% endif %}>
+
+  <div class="background-media-text__container">
+    {%- if section.settings.parallax -%}
+      <div class="parallax-container">
+        <div class="parallax-image">
+    {%- endif -%}
+
+      {%- if section.settings.image != blank -%}
+        {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img
+          class="image-fit background-media-text__image background-media-text__image--{{ section.id }} lazyload"
+          src=""
+          data-src="{{ img_url }}"
+          data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+          data-widths="[720, 900, 1080, 1800, 2400]"
+          data-sizes="auto"
+          alt="{{ section.settings.image.alt | escape }}"
+          style="object-position: {{ section.settings.focal_point }}">
+        <noscript>
+          <img
+            class="image-fit background-media-text__image background-media-text__image--{{ section.id }} lazyloaded"
+            src="{{ section.settings.image | img_url: '1800x' }}"
+            alt="{{ section.settings.image.alt }}">
+        </noscript>
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+
+    {%- if section.settings.parallax -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+  {%- if section.settings.subtitle != blank or section.settings.title != blank or section.settings.text != blank -%}
+    <div class="background-media-text__inner">
+      <div class="main-1">
+        <div class="animation-cropper n-1">
+          <div class="animation-contents">
+            <div class="background-media-text__text{% if section.settings.framed %} background-media-text__text--framed{% endif %}">
+              {%- if section.settings.subtitle -%}
+                <p class="h5">{{ section.settings.subtitle }}</p>
+              {%- endif -%}
+              {%- if section.settings.title != blank -%}
+                <p class="h3">{{ section.settings.title | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.text != blank -%}
+                <div class="rte background-media-text__subtext">{{ section.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+        <div class="animation-cropper  n-2">
+          <div class="animation-contents">
+            <div class="background-media-text__text{% if section.settings.framed %} background-media-text__text--framed{% endif %}">
+             <div class="text-2">
+               {%- if section.settings.title-2 != blank -%}
+                <p class="h3">{{ section.settings.title-2 | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.text-2 != blank -%}
+                <div class="rte background-media-text__subtext">{{ section.settings.text-2 }}</div>
+              {%- endif -%}
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      
+          <div class="main-2">
+         <div class="animation-cropper  n-3">
+          <div class="animation-contents">
+            <div class="background-media-text__text{% if section.settings.framed %} background-media-text__text--framed{% endif %}">
+             <div class="text-2">
+               {%- if section.settings.title-3 != blank -%}
+                <p class="h3">{{ section.settings.title-3 | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.text-3 != blank -%}
+                <div class="rte background-media-text__subtext">{{ section.settings.text-3 }}</div>
+              {%- endif -%}
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="animation-cropper  n-4">
+          <div class="animation-contents">
+            <div class="background-media-text__text{% if section.settings.framed %} background-media-text__text--framed{% endif %}">
+             <div class="text-4">
+               {%- if section.settings.title-4 != blank -%}
+                <p class="h3">{{ section.settings.title-4 | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.text-4 != blank -%}
+                <div class="rte background-media-text__subtext">{{ section.settings.text-4 }}</div>
+              {%- endif -%}
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+<div class="background-media-text__spacer background-media-text--{{ section.settings.height }}"></div>
+
+{% schema %}
+  {
+    "name": "Large image with text box",
+    "class": "index-section--flush",
+    "settings": [
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading",
+        "default": "Impressive"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Large image with text box"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+      },
+      {
+        "type": "text",
+        "id": "title-2",
+        "label": "Heading-2",
+        "default": "Large image with text box"
+      },
+      {
+        "type": "richtext",
+        "id": "text-2",
+        "label": "Text-2",
+        "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+      },
+      {
+        "type": "text",
+        "id": "title-3",
+        "label": "Heading-3",
+        "default": "Large image with text box"
+      },
+      {
+        "type": "richtext",
+        "id": "text-3",
+        "label": "Text-3",
+        "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+      },
+      {
+        "type": "text",
+        "id": "title-4",
+        "label": "Heading-4",
+        "default": "Large image with text box"
+      },
+      {
+        "type": "richtext",
+        "id": "text-4",
+        "label": "Text-4",
+        "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+      },
+      
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "focal_point",
+        "label": "Image focal point",
+        "info": "Used to keep the subject of your photo in view.",
+        "default": "center",
+        "options": [
+          {
+            "value": "20% 0",
+            "label": "Top left"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "80% 0",
+            "label": "Top right"
+          },
+          {
+            "value": "20% 50%",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Middle"
+          },
+          {
+            "value": "80% 50%",
+            "label": "Right"
+          },
+          {
+            "value": "20% 100%",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "80% 100%",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Layout",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Text on left"
+          },
+          {
+            "value": "right",
+            "label": "Text on right"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "height",
+        "label": "Section height",
+        "default": 550,
+        "min": 450,
+        "max": 750,
+        "step": 100,
+        "unit": "px"
+      },
+      {
+        "type": "checkbox",
+        "id": "framed",
+        "label": "Add frame",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "parallax",
+        "label": "Enable parallax",
+        "default": true
+      }
+    ],
+    "presets": [
+      {
+        "name": "Large image with text box"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  .main-1 {
+    display: flex;
+    flex-direction: column;
+      float: left;
+  padding:25px;
+}
+  .main-2 {
+    display: flex;
+    flex-direction: column;
+  float:right;
+  padding: 25px;
+}
+.n-2 {
+    margin-top:30%;
+}
+.n-4 {
+    margin-top: 30%;
+}
+  @media only screen and (max-width: 825px) {
+  .n-2{
+    margin:0px;
+  }
+  .n-4{
+    margin:0px;
+  }
+  .main-2{
+  padding:0px;
+  }
+    .main-1{
+  padding:0px;
+  }
+  .duble-txt{
+   display: block !important;
+}
+/*   .main-1{
+    display:block;
+  }
+  .main-2{
+    display:block;
+  } */
+}
+  .background-media-text__text p.h3 {
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 15px 15px 0px 0px;
+    background: #10BBEF;
+}
+  @media only screen and (max-width:2740px) and (min-width:2342px){
+  .new-backimg{
+  width:43%;
+  }
+  .main-2{
+    padding:25px 300px 25px 100px;
+  }
+ .main-1 {
+    padding:25px 100px 25px 300px;
+  }
+  .tab-link{margin-right:100px;}
+}
+  @media only screen and (max-width:2340px) and (min-width: 1941px){
+  .new-backimg{
+  width:53%;
+  }
+  .main-2{
+    padding:25px 250px 25px 100px;
+  }
+   .main-1 {
+    padding:25px 100px 25px 250px;
+  }
+  .tab-link{margin-right:80px;}
+}
+  @media only screen and (max-width:1940px) and (min-width: 1540px){
+  .new-backimg{
+  width:63%;
+  }
+  .main-2{
+    padding:25px 200px 25px 100px;
+  }
+   .main-1 {
+    padding:25px 100px 25px 200px;
+  }
+  .tab-link{margin-right:70px;}
+}
+  
+  p.h5 {
+    margin: 0px;
+}
+</style>

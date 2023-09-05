@@ -1,0 +1,155 @@
+<div class="page-width">
+<div class="new-headin-mw">  
+  <h2>{{ section.settings.title}}</h2>
+</div>
+  <div class="duble-txt">
+    
+    <div class="para1"> 
+      
+<div class="new-headin-text">  
+  <p>{{ section.settings.text-1}}</p>
+</div>
+   
+<div class="new-headin-text">  
+  <p>{{ section.settings.text-2 | escape }}</p>
+</div>
+      <div class="new-headin-text">  
+  <p>{{ section.settings.text-3 | escape }}</p>
+</div>
+      <div class="new-headin-text">  
+  <p>{{ section.settings.text-4 | escape }}</p>
+</div>
+      <div class="new-headin-text">  
+  <p>{{ section.settings.text-5 | escape }}</p>
+</div>  
+    </div>
+
+    <div class="para2"> 
+      
+  <div class="new-headin-text">  
+  <p>{{ section.settings.text-6 | escape }}</p>
+</div>
+      <div class="new-headin-text">  
+  <p>{{ section.settings.text-7 | escape }}</p>
+</div>
+      <div class="new-headin-text">  
+  <p>{{ section.settings.text-8 | escape }}</p>
+</div>
+      <div class="new-headin-text">  
+  <p>{{ section.settings.text-9 | escape }}</p>
+</div>
+      <div class="new-headin-text">  
+  <p>{{ section.settings.text-10 | escape }}</p>
+</div>
+ 
+   </div> 
+    
+  </div>
+
+</div> 
+{% schema %}
+  {
+    "name": "double rich text",
+    "class": "index-section",
+    "settings": [
+      {
+            "type": "html",
+            "id": "title",
+            "label": "Heading",
+            "default": "Rich text"
+          },
+          {
+            "id": "text-1",
+            "type": "text",
+            "label": "Text-1",
+            "default": "text"
+          },
+      {
+            "id": "text-2",
+            "type": "text",
+            "label": "Text-2",
+            "default": "text"
+          },
+      {
+            "id": "text-3",
+            "type": "text",
+            "label": "Text-3",
+            "default": "text"
+          },
+      {
+            "id": "text-4",
+            "type": "text",
+            "label": "Text-4",
+            "default": "text"
+          },
+      {
+            "id": "text-5",
+            "type": "text",
+            "label": "Text-5",
+            "default": "text"
+          },
+      {
+            "id": "text-6",
+            "type": "text",
+            "label": "Text-6",
+            "default": "text"
+          },
+      {
+            "id": "text-7",
+            "type": "text",
+            "label": "Text-7",
+            "default": "text"
+          },
+      {
+            "id": "text-8",
+            "type": "text",
+            "label": "Text-8",
+            "default": "text"
+          },
+      {
+            "id": "text-9",
+            "type": "text",
+            "label": "Text-9",
+            "default": "text"
+          },
+      {
+            "id": "text-10",
+            "type": "text",
+            "label": "Text-10",
+            "default": "text"
+          }
+      
+    ],
+    "presets": [
+      {
+        "name": "double rich text",
+        "category": "text"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .duble-txt {
+    display: flex;
+   justify-content: center;
+   padding:10px;
+}
+  .new-headin-text p{
+    margin:0px;
+    width:100%;
+    text-align:center;
+  }
+  .new-headin-text:before {
+    content: "\2713";
+    margin-right: 15px;
+}
+  .new-headin-text {
+    display: flex;
+}
+@media only screen and (max-width: 825px){
+   .duble-txt{
+     display:block;
+   }
+}
+</style>

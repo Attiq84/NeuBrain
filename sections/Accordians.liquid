@@ -1,0 +1,186 @@
+
+  <div class="page-width">
+ <div class="container">
+<div class="row" id="row-center">
+<div class="col-12 accord">
+
+<div class="new-headin-acc">  <h2>{{ section.settings.title }}</h2></div>
+
+ 
+     {% for block in section.blocks %}
+<button class="accordion"> <h4 class="nw-a">{{block.settings.question}}</h4></button>
+<div class="panel" style="color:black">
+  <p>
+ {{block.settings.answer}}</p>
+</div>
+     {% endfor %}
+  </div> 
+</div>  
+ </div> 
+  </div>
+
+
+{% schema %}
+  {
+    "name": "Accordians",
+    "class": "index-section",
+    "settings": [
+      {
+            "type": "html",
+            "id": "title",
+            "label": "Heading",
+            "default": "Rich text"
+          }
+    ],
+
+     "max_blocks": 5,
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+      "type": "text",
+      "id": "question",
+      "label": "question"
+    },
+
+{
+      "type": "richtext",
+      "id": "answer",
+      "label": "answer"
+    }
+
+    
+       ]
+     }
+  ],
+    "presets": [
+      {
+        "name": "Accordian",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+h4.nw-a {
+    letter-spacing: 1px;
+}
+
+  div#row-center {
+    align-items: center;
+}
+
+
+button.accordion {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+}  
+  
+.new-headin {
+    text-align: center;
+  width: 70%;
+    margin: auto;
+}
+  .ne-4{
+    text-align: center;
+  }
+
+
+
+
+.accordion {
+  
+  border-bottom: 1px solid #000 !important;
+  color: black;
+  cursor: pointer;
+  padding: 20px 45px 5px 5px;
+  width: 80%;
+  margin: auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  
+}
+
+.panel {
+        
+  display: none;
+  overflow: hidden;
+  color: white;
+  width: 80%;
+    margin: auto;
+}
+  
+  button.accordion:after {
+    content: "\002B";
+    display: inline-block;
+    font: 14px/1 FontAwesome;
+    font-size: 20px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    vertical-align: top;
+    float: right;
+    clear: right;
+    font-weight: bold;
+    color: #fff;
+    font-size: 25px;
+    background: #10BBEF;
+    border-radius: 50%;
+    padding: 3px 8px 3px 8px;
+}
+  
+
+  .panel p {
+    text-align: left;
+}
+
+
+  
+
+/*   Mobile styling */
+  @media (max-width:767px){
+
+  .accordion {
+   
+    width: 100%;  
+  }
+    h3.heading.h2.big-font {
+    margin-top: 12px !important;
+}
+    .panel{
+      width:100%;
+    }
+ button.accordion:after {
+    padding: 2px 8px 2px 8px;
+}
+  }
+
+</style>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>

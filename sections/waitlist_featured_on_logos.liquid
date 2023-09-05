@@ -1,0 +1,57 @@
+  <section class="featured_on featured_on_logos">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+       <div class="featured_heading">
+        <h5>{{ section.settings.featured_on_main_heading }}</h5>
+       </div> 
+      </div>
+    </div>
+    <div class="row row_logos">
+         {% for block in section.blocks %}
+      <div class="col-sm-4">
+        <div class="heading_sec">
+        <img src="{{  block.settings.waitlist-featured-logo | img_url: 'master' }}">
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Waitlist Featured Logos",
+     "settings": [
+       {
+          "type": "richtext",
+          "id": "featured_on_main_heading",
+          "label": "Add about coffee Heading"
+          }  
+        ],
+    "blocks":[
+      {
+        "type": "block",
+        "name": "featured-on-logos",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "waitlist-featured-logo",
+            "label": "Upload Logo"
+          } 
+          
+        ]
+      }
+    ],
+    "presets": [{
+    "name": "Waitlist Featured Logos",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

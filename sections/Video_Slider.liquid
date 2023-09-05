@@ -1,0 +1,240 @@
+<style>
+  /* Add your CSS styles here */
+  .swiper-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+   
+  }
+
+  .video-height-ar {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+ 
+  }
+ 
+  .slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+
+  .slide-heading {
+    font-size: 3em;
+    margin-bottom: 1rem;
+  }
+
+  .slide-description {
+ font-size: 18px;
+    margin-bottom: 1.5rem;
+  }
+  .slide-cont{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.6); 
+  }
+
+  /* Add your remaining CSS styles here */
+  @media screen and (max-width:600px){
+    .slide-description {
+ font-size: 18px;
+  }
+   .slide-heading {
+    font-size: 26px;
+  } 
+    .slide-content{
+    position: relative;
+    width:80%;
+  }
+  }
+</style>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    {% for i in (1..5) %}
+      {% assign videoKey = 'video' | append: i | append: '' %}
+      {% assign videoUrl = section.settings[videoKey] %}
+      {% if videoUrl != blank %}
+        <div class="swiper-slide">
+          <video class="video-height-ar" loop autoplay muted playsinline data-wf-ignore="true" data-object-fit="cover">
+            <source src="{{ videoUrl }}" data-wf-ignore="true" type="video/mp4" />
+          </video>
+          <div class="slide-cont">
+          <div class="slide-content">
+            {% capture headingKey %}heading{{ i }}{% endcapture %}
+            {% capture descriptionKey %}description{{ i }}{% endcapture %}
+            {% capture buttonLinkKey %}button_link{{ i }}{% endcapture %}
+            {% capture buttonTextKey %}button_text{{ i }}{% endcapture %}
+
+            <h2 class="slide-heading">{{ section.settings[headingKey] }}</h2>
+            <p class="slide-description">{{ section.settings[descriptionKey] }}</p>
+            <a href="{{ section.settings[buttonLinkKey] }}" class="btn">{{ section.settings[buttonTextKey] }}</a>
+          </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Add pagination and navigation buttons -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Include Swiper CSS and JS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  // Initialize the Swiper slider
+  var swiper = new Swiper('.swiper-container', {
+    loop: true, // Enable continuous loop
+    autoplay: {
+      delay: 5000, // Delay between slides in milliseconds
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // Enable clickable pagination bullets
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Video Slider",
+  "class": "video-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video1",
+      "label": "Video URL 1 (MP4)"
+    },
+    {
+      "type": "text",
+      "id": "heading1",
+      "label": "Slide 1 Heading"
+    },
+    {
+      "type": "text",
+      "id": "description1",
+      "label": "Slide 1 Description"
+    },
+    {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Slide 1 Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text1",
+      "label": "Slide 1 Button Text"
+    },
+    {
+      "type": "text",
+      "id": "video2",
+      "label": "Video URL 2 (MP4)"
+    },
+    {
+      "type": "text",
+      "id": "heading2",
+      "label": "Slide 2 Heading"
+    },
+    {
+      "type": "text",
+      "id": "description2",
+      "label": "Slide 2 Description"
+    },
+    {
+      "type": "url",
+      "id": "button_link2",
+      "label": "Slide 2 Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text2",
+      "label": "Slide 2 Button Text"
+    },
+     {
+      "type": "text",
+      "id": "video3",
+      "label": "Video URL 3 (MP4)"
+    },
+    {
+      "type": "text",
+      "id": "heading3",
+      "label": "Slide 3 Heading"
+    },
+    {
+      "type": "text",
+      "id": "description3",
+      "label": "Slide 3 Description"
+    },
+    {
+      "type": "url",
+      "id": "button_link3",
+      "label": "Slide 3 Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text3",
+      "label": "Slide 3 Button Text"
+    },
+     {
+      "type": "text",
+      "id": "video4",
+      "label": "Video URL 4 (MP4)"
+    },
+    {
+      "type": "text",
+      "id": "heading4",
+      "label": "Slide 4 Heading"
+    },
+    {
+      "type": "text",
+      "id": "description4",
+      "label": "Slide 4 Description"
+    },
+    {
+      "type": "url",
+      "id": "button_link4",
+      "label": "Slide 4 Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text4",
+      "label": "Slide 4 Button Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Slider",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,176 @@
+ <section class="neubrain">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="neubrain_heading" style="text-align: center;">
+          <div class="neubrain_heading_inner">
+          <h3>{{ section.settings.testimionial-heading }}</h3>
+          <p>{{ section.settings.testimonial-text }}</p>
+          </div>
+          <div id="sync2" class="owl-carousel owl-theme neubrain_images">
+            {% for block in section.blocks %}
+            <div class="item"><img src="{{  block.settings.testimonials-pic | img_url: 'master' }}"></div>
+            {% endfor %}
+          </div>
+          <div id="sync1" class="owl-carousel owl-theme neubrain_content">
+            {% for block in section.blocks %}
+            <div class="item">
+              <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004236.png?v=1693610228">
+              <p>{{  block.settings.testimonials-paragraph }}</p>
+              <h5>{{  block.settings.testimonials-title }}</h5>
+            </div>
+            
+            {% endfor %}
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    $(document).ready(function() {
+
+    var sync1 = $("#sync1");
+    var sync2 = $("#sync2");
+    var slidesPerPage = 5; //globaly define number of elements per page
+    var syncedSecondary = true;
+
+    sync1.owlCarousel({
+      center: true,
+        items: 1,
+        slideSpeed: 5000,
+        nav: true,
+        autoplay: true, 
+        dots: true,
+      mouseDrag: false,
+		touchDrag: false,
+		pullDrag: false,
+		freeDrag: false,
+        loop: true,
+      autoplayHoverPause: true,
+        responsiveRefreshRate: 200,
+        navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+    }).on('changed.owl.carousel', syncPosition);
+
+    sync2
+        .on('initialized.owl.carousel', function() {
+            sync2.find(".owl-item").eq(0).addClass("current");
+        })
+        .owlCarousel({
+            items: slidesPerPage,
+            dots: true,
+            nav: true,
+            mouseDrag: false,
+		touchDrag: false,
+          
+		pullDrag: false,
+		freeDrag: false,
+            smartSpeed: 3200,
+            slideSpeed: 3500,
+            slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+            responsiveRefreshRate: 100
+        }).on('changed.owl.carousel', syncPosition2);
+
+    function syncPosition(el) {
+        //if you set loop to false, you have to restore this next line
+        //var current = el.item.index;
+
+        //if you disable loop you have to comment this block
+        var count = el.item.count - 1;
+        var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+
+        if (current < 0) {
+            current = count;
+        }
+        if (current > count) {
+            current = 0;
+        }
+
+        //end block
+
+        sync2
+            .find(".owl-item")
+            .removeClass("current")
+            .eq(current)
+            .addClass("current");
+        var onscreen = sync2.find('.owl-item.active').length - 1;
+        var start = sync2.find('.owl-item.active').first().index();
+        var end = sync2.find('.owl-item.active').last().index();
+
+        if (current > end) {
+            sync2.data('owl.carousel').to(current, 100, true);
+        }
+        if (current < start) {
+            sync2.data('owl.carousel').to(current - onscreen, 100, true);
+        }
+    }
+
+    function syncPosition2(el) {
+        if (syncedSecondary) {
+            var number = el.item.index;
+            sync1.data('owl.carousel').to(number, 100, true);
+        }
+    }
+
+    sync2.on("click", ".owl-item", function(e) {
+        e.preventDefault();
+        var number = $(this).index();
+        sync1.data('owl.carousel').to(number, 300, true);
+    });
+});
+</script>
+
+
+{% schema %}
+  {
+    "name": "Waitlist Testimonials",
+        "settings": [
+          {
+            "type": "text",
+            "id": "testimionial-heading",
+            "label": "Upload Testimonial Heading"
+          },
+          {
+          "type": "richtext",
+          "id": "testimonial-text",
+          "label": "Add Testimonial Text"
+          } 
+        ],
+    "blocks":[
+      {
+        "type": "block",
+        "name": "waitlist-testimonials",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "testimonials-pic",
+            "label": "Upload Image"
+          },
+          {
+          "type": "text",
+          "id": "testimonials-title",
+          "label": "Add Title"
+          },
+            {
+            "type": "richtext",
+            "id": "testimonials-paragraph",
+            "label": "Add Paragraph"
+          }
+          
+        ]
+      }
+    ],
+    "presets": [{
+    "name": "Waitlist Testimonials",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

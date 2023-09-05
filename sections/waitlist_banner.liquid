@@ -1,0 +1,3896 @@
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<section class="sec_home"  >
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="logo">
+          <img src="{{  section.settings.image-add | img_url: 'master' }}">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="coming_soon_btn">
+          <a href="javascript:void(0)">{{ section.settings.button_name }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-7">
+        <div class="home_content">
+            <h1>{{ section.settings.banner_text1 }}</h1>
+          <p>{{ section.settings.banner_text2 }}</p>
+          {{ section.settings.klavio_code }}
+         
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="home_pic_right">
+          <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/product.png?v=1693234315">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+
+
+
+
+<style>
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+}
+.home_pic_right {
+    display: none;
+}
+  .no_jitters_sec img {
+    width: 130px;
+}
+  section.sec_home {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Vector_2_1_163b39e9-a66a-4718-8762-c75ef566acae.png?v=1692128228);
+    background-size: cover;
+}
+section.sec_home {
+
+    background-size: cover !important;
+    background-position: bottom right !important;
+}
+.custom_slider_sec {
+    padding: 27px 177px;
+    background: #f7faff;
+}
+section.sec_home {
+    padding: 27px 177px;
+}
+.home_content h1 {
+    font-family: 'Avenir Next Bold';
+    font-size: 60px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 80px;
+      margin-top: 50px;
+}
+section.sec_home .col-sm-6 {
+    width: 50%;
+    float: left; 
+}
+  section.sec_home .row {
+    display: flex;
+}
+.row_flex{
+  display: flex;
+}
+.row_flex .col-sm-6 {
+    width: 50%;
+    float: left; 
+}
+.home_content p{
+      font-size: 26px;
+    font-weight: 900;
+    line-height: 35.52px;
+    color: #1699f8;
+    font-family: "Avenir Next Bold";
+}
+  .klaviyo-form-R8wb3Z.klaviyo-form.form-version-cid-1 {
+    float: left;
+}
+ .sec_home .col-sm-7 {
+    width: 58.33333333%;
+}
+
+.sec_home .col-sm-5 {
+    width: 41%;
+}
+  .coming_soon_btn a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #336CCD;
+    font-family: 'Avenir Next Regular';
+    line-height: 27.32px;
+    background: #336CCD15;
+    padding: 13px 23px;
+    border-radius: 14px;
+}
+.coming_soon_btn {
+    margin-top: 29px;
+    float: right;
+}
+.header-sticky-wrapper {
+    display: none;
+}
+div.custom_slider {
+    text-align: center;
+    background-image: url(/cdn/shop/files/Rectangle_23474.png?v=1692035138)!important;
+    background-position: center!important;
+    background-size: 100%!important;
+    color: #fff;
+    background-repeat: no-repeat;
+    padding-top: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    background-size: 100% 100% !important;    height: 70px;
+}
+div.custom_slider div.slide_text  {
+    font-size: 22px;
+    font-weight: 500;
+    background-position: left center;
+    margin: 0;
+    padding: 0;
+    font-family: Avenir Next Regular;
+    position: relative;
+    display: inline-block;
+}
+div#custom_slider div.slide_text:before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 4px;
+    background: url(/cdn/shop/files/tick-circle.png?v=1692035505) no-repeat;
+    width: 24px;
+    height: 24px;
+    background-position: left center;
+}
+.slide_text.item img {
+    width: 20px !important;
+    height: auto !important;
+    display: inline-block;
+    margin-top: 6px;
+    float: left;
+    margin-right: 5px;
+}
+div.custom_slider div.slide_text {
+    font-size: 22px;
+    font-weight: 500;
+    background-position: left center;
+    margin: 0;
+    padding: 0;
+    font-family: Avenir Next Regular;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding-right: 150px;
+    display: inline-block;
+    margin-top: 0;
+    padding-bottom: 0;
+    height: 0;
+    padding-top: 18px;
+}
+div.custom_slider div.slide_text:last-child{
+  padding-right:0;
+}
+section.featured_on.featured_on_block:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/eclips_2.png?v=1692216894) no-repeat;
+    width: 537px;
+    height: 832px;
+    transform: rotate(180deg);
+}
+.featured_on {
+    padding: 27px 177px;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group.png?v=1692132322) no-repeat !important;
+    background-position: center center;
+    text-align: center;
+    position: relative;
+}
+  section.featured_on h5 {
+    color: #454545;
+    font-size: 40px;
+    font-family: 'Avenir Next Bold';
+    line-height: 54.64px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+}
+section.featured_on .row .col-sm-4 {
+    width: 33.33%;
+}
+section.featured_on .row_logos {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+section.featured_on h2 {
+    font-family: 'Avenir Next Bold';
+    font-size: 60px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 80px;
+    margin-top: 50px;
+    /* font-family: 'Avenir Next Regular'; */
+    font-weight: 700;
+    letter-spacing: 0;
+    text-align: left;
+}
+section.featured_on p {
+    font-size: 40px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 46px;
+    font-family: 'Avenir Next Regular';
+    font-weight: 500;
+    letter-spacing: 0;
+    text-align: left;
+    width: 80%;
+}
+section.featured_on .right_text_blueline {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23484.png?v=1692133578) no-repeat;
+    background-position: bottom;
+    font-size: 30px;
+    font-weight: 400;
+    color: #454545;
+    font-family: 'Avenir Next Regular';
+    padding-bottom: 10px;
+    background-size: 100%;
+    margin-right: -177px;
+    margin-top: 50px;
+}
+section.featured_on .right_text_blueline p {
+    font-size: 30px;
+    font-weight: 400;
+    color: #454545;
+    font-family: 'Avenir Next Regular';
+}
+section.featured_on .right_text_blueline p span {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #1699F8;
+}
+.love_about_coffee_image_inner {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23486.png?v=1692193956) no-repeat !important;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-size: 70% 95% !important;
+    background-position: right bottom !important;
+}
+
+.col-sm-6.love_about_coffee_image {
+    padding-right: 30px;
+}
+.row.right_section_bg {
+    background: #fff;
+    display: flow-root;
+    box-shadow: 4px 4px 40px #ccc;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 30px 0;
+}
+.taste h3 {
+    color: #191919;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: 'Avenir Next Regular';
+    text-align: left;
+    text-transform: capitalize;
+}
+section.featured_on .taste p {
+    color: #545454;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Avenir Next Regular';
+    text-align: left;
+    line-height: 27px;
+}
+section.featured_on .row .col-sm-8 {
+    width: 66.66%;
+}
+.taste_content {
+    padding-right: 30px;
+}
+  .box_text_bottom {
+    font-size: 18px;
+    font-family: 'Avenir Next Regular';
+    line-height: 30px;
+    font-weight: 400;
+    padding: 30px;color:#000;
+    text-align: left;
+}
+  .box_text_bottom strong{
+    font-size: 18px;
+    font-family: 'Avenir Next Regular';
+    line-height: 30px;
+    font-weight: 400;
+    color:#1699F8;
+}
+section.no_jitters:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/eclips_2.png?v=1692216894) no-repeat;
+    width: 537px;
+    height: 832px;
+}
+section.no_jitters {
+    padding: 100px 177px;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/neubrain_bg.png?v=1692216704) no-repeat;
+    background-position: right center !important;
+    text-align: left;
+    position: relative;
+}
+.no_jitters_sec img {
+    position: absolute;
+    top: -62px;left: 0;
+}
+.no_jitters_sec {
+    background: #fff;
+    display: flow-root;
+    box-shadow: 4px 4px 40px #ccc;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 30px;
+    width: 307px;
+    height: 200px;
+    position: relative;
+    padding-top: 68px;
+    margin-bottom: 100px;
+}
+.no_jitters_sec p {
+    font-family: 'Avenir Next Regular';
+    font-size: 18px;
+    line-height: 27px;
+    color: #545454;
+    font-weight: 500;
+}
+
+.no_jitters_sec h3 {
+    font-size: 24px;
+    color: #1699F8;
+    font-family: 'Avenir Next Regular';
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.row_flex .col-sm-3 {
+    width: 25%;
+}
+.row_flex .col-sm-6 {
+    width: 50%;
+}
+.center_image {
+    width: 94%;
+    padding-right: 100px;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+.center_image:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23483.png?v=1692216343) no-repeat;
+    width: 587px;
+    height: 323px;
+}
+  .center_image:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23483.png?v=1692216343) no-repeat;
+    width: 587px;
+    height: 323px;
+}
+.center_image img {
+    border-radius: 30px;
+    position: relative;
+    z-index: 99;
+} 
+section.health_experts {
+    padding: 100px 177px;
+    background: #f7faff;
+    padding-top: 0;
+}
+section.health_experts h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 60px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 80px;
+}
+div#owl-demo-2.owl-carousel.owl-drag .owl-item {
+    margin-right: 50px !important;
+    margin-left: 0px !important;
+}
+div#owl-demo-2.owl-carousel .owl-stage {
+    padding-left: 0 !important;
+}
+section.health_experts h4 {
+    font-family: 'Avenir Next Bold';
+    font-size: 26px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 80px;
+    font-weight: 600;
+  margin:0;
+}
+section.health_experts p {
+    font-family: 'Avenir Next Regular';
+    font-size: 18px;
+    text-transform: inherit;
+    color: #242424;
+    font-weight: 400;
+    line-height: 27px;
+}
+div#owl-demo-2 .row.row_flex.item {
+    background: #fff;
+    display: flow-root;
+    box-shadow: 4px 4px 40px #ccc;
+    border-radius: 30px;
+    margin: 45px 35px;
+    margin-right: 0;
+}
+.robert_k_image img {
+    margin: -35px -38px -42px -38px;
+}
+.robert_k_content {
+    padding: 40px;
+    margin-left: -30px;
+    padding-left: 0;
+}
+section.health_experts .robert_last_text p {
+    font-family: 'Avenir Next Regular';
+    font-size: 20px;
+    text-transform: inherit;
+    color: #1699F8;
+    font-weight: 600;
+    line-height: 27px;
+    position: relative;
+}
+
+.robert_last_text {
+    position: relative;
+    padding-top: 22px;
+    margin-top: 30px;
+}
+
+.robert_last_text:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 6px;
+    background: #1699F8;
+    border-radius: 60px;
+}
+.author_bottom_info {
+    position: absolute;
+    left: 23px;
+    bottom: 50px;
+    color: #fff;
+}
+.robert_k_image {
+    position: relative;
+}
+.author_name_slide {
+    font-family: 'Avenir Next Regular';
+    font-size: 20px;
+    text-transform: inherit;
+    color: #fff;
+    font-weight: 600;
+    line-height: 30px;
+}
+.robert_k_image .author_bottom_info p {
+    font-family: 'Avenir Next Regular';
+    font-size: 18px;
+    text-transform: inherit;
+    color: #fff;
+    font-weight: 400;
+    line-height: 27px;
+}
+button.owl-next {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004231.png?v=1692224618) no-repeat !important;
+    width: 70px;
+    height: 70px;
+    font-size: 0 !important;font-size: 0 !important;
+    position: absolute;
+    right: -100px;
+    left: auto;
+    top: 42%;transform: rotate(0deg);
+    bottom: 0;
+}
+button.owl-prev {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004231.png?v=1692224618) no-repeat !important;
+    width: 70px;
+    height: 70px;
+    font-size: 0 !important;
+    font-size: 0 !important;
+    position: absolute;
+    left: auto;
+    left: -70px;
+    top: 42%;
+    transform: rotate(180deg);
+    bottom: 0;
+}
+div#owl-demo-2.owl-carousel.owl-drag .owl-item.cloned:not(.active) img {
+    margin-left: -95px;
+}
+div#owl-demo-2.owl-carousel.owl-drag .owl-item.cloned:not(.active) .author_bottom_info {
+    margin-left: -55px;
+}
+
+
+
+
+
+
+.tabs-menu {height: auto; padding:0; margin:0;}
+.tabs-menu li {
+    height: auto;
+    line-height: initial;
+    display: inline-block;
+    list-style: none;
+    margin-right: 0;
+    background-color: transparent;
+    border-top: 0;
+    border: 0;
+    display: block;
+}
+.tabs-menu li.current {
+    position: relative;
+    background-color: transparent;
+    border-bottom: 0;
+    z-index: 5;
+}
+.tabs-menu li a {
+    padding: 5px 40px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 500;
+    font-family: 'Avenir Next Regular';
+    text-transform: capitalize;
+    letter-spacing: 0;
+    display: block;
+}
+.tabs-menu .current a {
+    color: #1699F8;
+    border-left: 4px solid;
+    /* border-radius: 60px; */
+}
+.tab {
+    border: 0;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 20px;
+    width: auto;
+    margin-top: 0;
+    width: 100%;
+}
+.tab-content {max-width: 100%;padding: 20px;display: none;}
+#tab-1 {display: block;   }
+
+
+
+
+.sec-faq{
+   padding: 30px 0;
+}
+.sec-faq h2{
+    margin: 0 0 50px;
+}
+.sec-faq .set{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 1px solid #8E8E8E;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.sec-faq .set > a{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.sec-faq .set p{
+    margin:0;
+    color: #333;
+    font-size: 16px;
+}
+.sec-faq .set a.active {
+    margin: 0;
+ 
+    font-size: 18px;
+    font-weight: 700;
+}
+.sec-faq .set .content p{
+    margin: 15px 0 0;
+}
+.sec-faq .set > a:before{ background:url(images/set-ar.png) no-repeat; float:right; content:"";height: 12px;    margin: 6px 0 0;    width: 13px;}
+.sec-faq .set > a.active:before{background:url(images/set-ar-active.png) no-repeat; width: 16px; height: 3px; }
+.sec-faq .set .content{display:none;}/*sec-faq*/
+.sec-faq{
+   padding: 30px 0;
+}
+.sec-faq h2{
+    margin: 0 0 50px;
+}
+.sec-faq .set{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 1px solid #8E8E8E;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.sec-faq .set > a{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.sec-faq .set p{
+    margin:0;
+    color: #333;
+    font-size: 16px;
+}
+.sec-faq .set a.active {
+    margin: 0;
+ 
+    font-size: 18px;
+    font-weight: 700;
+}
+.sec-faq .set .content p{
+    margin: 15px 0 0;
+}
+.sec-faq .set > a:before{ background:url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/arrow-circle-down.svg?v=1692298194) no-repeat; float:right; content:"";height: 24px;    margin: 6px 0 0;    width: 24px;}
+.sec-faq .set > a.active:before{background:url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/arrow-circle-up.png?v=1692299395) no-repeat; width: 24px; height: 24px; }
+.sec-faq .set .content{display:none;}
+ 
+
+
+  #sync1 {
+  .item {
+    background: #fff;
+    padding: 50px;
+    margin: 55px;
+    color: #FFF;
+    border-radius: 30px;
+    text-align: center;
+  }
+}
+
+#sync2 {
+  .item {
+ 
+    text-align: center;
+    cursor: pointer;
+    h1 {
+      font-size: 18px;
+    }
+  }
+  .current .item{
+     
+  }
+}
+
+
+
+.owl-theme {
+  .owl-nav {
+    /*default owl-theme theme reset .disabled:hover links */
+    [class*='owl-'] {
+      transition: all .3s ease;
+      &.disabled:hover {
+       background-color: #D6D6D6;
+      }   
+    }
+    
+  }
+}
+
+//arrows on first carousel
+#sync1.owl-theme {
+  position: relative;
+  .owl-next, .owl-prev {
+    width: 22px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+  }
+  .owl-prev {
+    left: 10px;
+  }
+  .owl-next {
+    right: 10px;
+  }
+}
+section.neubrain {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Vector_2_1_89646814-6db4-47f2-9282-aada6fa01dea.png?v=1692280188) no-repeat;
+    padding: 100px 177px;
+    background-size: cover;
+}
+.taste_content {
+    padding-right: 0;
+}
+section.featured_on .row .col-sm-4 {
+    width: 30%;
+    max-width: 30%;
+}
+section.featured_on .row .col-sm-8 {
+    width: 70%;
+    padding: 0;
+    max-width: 70%;
+    flex: 0 0 70%;
+}
+.row.right_section_bg {
+    background: #fff;
+    display: flow-root;
+    box-shadow: 4px 4px 40px #ccc;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 50px 0 30px 0;
+}
+section.featured_on .row:nth-child(4) .col-sm-6:nth-child(2) {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.robert_k_content {
+    padding: 40px;
+    margin-left: -30px;
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+.robert_k_image img {
+    margin: -31px -38px -42px -50px;
+}
+#sync1 img {
+    width: auto;
+    display: inline-block;
+}
+#sync1 h5 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #000;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+#sync1 p {
+    color: #545454;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;font-family: 'Avenir Next Regular';
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+button.owl-next svg {
+    display: none;
+}
+button.owl-prev svg {
+    display: none;
+}
+.neubrain_heading .neubrain_heading_inner h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 60px;
+    text-transform: inherit !important;
+    color: #454545;margin:0;
+   
+}
+.neubrain_heading .neubrain_heading_inner p {
+    font-family: 'Avenir Next Regular';
+    font-size: 40px;
+    text-transform: inherit !important;
+    color: #454545;
+  margin-bottom:20px;
+}
+#sync2 .owl-item {
+    width: 120px !important;
+    height: 120px;
+    margin: 15px;
+    transition: all .2s ease;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+#sync2 .owl-item.active.current {
+    border: 1px solid #1699F8;
+    border-radius: 50%;
+    width: 160px !important;
+    height: 160px;transition: all .2s ease;
+}
+#sync2.owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;    width: 100% !important;
+}
+#sync2.owl-carousel .owl-stage-outer {
+    text-align: center;
+    display: inline-block;
+}
+#sync1 button.owl-next {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004238.png?v=1692287420) no-repeat !important;
+    width: 70px;
+    height: 70px;
+    font-size: 0 !important;
+    font-size: 0 !important;
+    position: absolute;
+    right: -100px;
+    left: auto;
+    top: 42%;
+    transform: rotate(180deg);
+    bottom: 0;
+}
+#sync1 button.owl-next:hover {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004237.png?v=1692287359) no-repeat !important;
+    width: 70px;
+    height: 70px;
+    font-size: 0 !important;
+    font-size: 0 !important;
+    position: absolute;
+    right: -100px;
+    left: auto;
+    top: 42%;
+    transform: rotate(0deg);
+    bottom: 0;
+}
+#sync1 button.owl-prev {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004238.png?v=1692287420) no-repeat !important;
+    width: 70px;
+    height: 70px;
+    font-size: 0 !important;
+    font-size: 0 !important;
+    position: absolute;
+    left: auto;
+    left: -70px;
+    top: 42%;
+    transform: rotate(0deg);
+    bottom: 0;
+}
+#sync1 button.owl-prev:hover {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004237.png?v=1692287359) no-repeat !important;
+    width: 70px;
+    height: 70px;
+    font-size: 0 !important;
+    font-size: 0 !important;
+    position: absolute;
+    left: auto;
+    left: -70px;
+    top: 42%;
+    transform: rotate(180deg);
+    bottom: 0;
+}
+section.Ingredients {
+    background: #f8faff;
+    padding: 100px 177px;
+}
+section.neubrain {
+    padding-bottom: 0;
+}
+div#tabs-container {
+    background: #fff;
+    box-shadow: 4px 4px 40px #ccc;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+section.Ingredients h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 60px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.tabs-menu {
+    height: auto;
+    padding: 53px 0;
+    margin: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23499.png?v=1692294603) no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+section.Ingredients .premium h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 40px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.premium strong {
+    color: #1699F8;
+    font-size: 30px;
+    text-transform: inherit !important;
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 600;
+}
+.premium br {
+    display: none;
+}
+.premium p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #545454;
+}
+.ingredients_pic img {
+    margin-top: -30px;
+    margin-right: -20px !important;
+    position: absolute;
+    right: 0;
+    border-radius: 30px;
+    height: 610px;
+}
+a.btn1 {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23471.png?v=1692296260) no-repeat;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 60px;
+    background-size: cover;
+    padding: 22.5px 49px 24.5px 49px;
+    margin-top: 10px;
+    display: inline-block;
+    background-size: 100%;
+    text-decoration: none !important;
+}
+.tabs-menu li a {
+    border-left: 4px solid transparent;
+}
+section.sec-faq {
+    background: #f8faff;
+    padding: 0 177px 100px 177px;
+}
+.sec-faq .set > a {
+    display: block;
+    text-decoration: none;
+    color: #454545;
+    font-size: 20px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.sec-faq .set > a div {
+    /* float: left; */
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    background: #1699F810;
+    text-align: center;
+    border-radius: 14px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+.sec-faq .set {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 0;
+    margin-bottom: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #D2D8E1;
+}
+.premium p {
+    font-family: 'Avenir Next Regular';
+}
+.sec-faq .set .content {
+    padding-left: 60px;
+    font-size: 18px;
+    font-weight: 500;padding-right: 20px;
+    line-height: 24.59px;
+    color: #545454;
+    font-family: 'Avenir Next Regular';
+}
+.sec-faq .set:last-child {
+    border: 0;
+}
+.sec_faq_inner {
+    background: #fff;
+    box-shadow: 4px 4px 40px #ccc;
+    border-radius: 35px;
+    padding: 20px 30px;
+    position: relative;
+}
+.sec_faq_inner1:before {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23504.png?v=1692300776) no-repeat;
+    position: absolute;
+    left: 0px;
+    bottom: -15px;
+    width: 587px;
+    height: 218px;
+    background-size: 100%;
+    content: "";
+}
+.row.box_2 .col-sm-5 {
+    float: left;
+}
+.row.box_2 .col-sm-7 {
+    float: left;    padding-right: 0;
+}
+
+.row.box_2 h3 {
+    font-size: 28px;
+    color: #000;
+    font-weight: 600;
+    text-transform: inherit;
+    font-family: 'Avenir Next Regular';
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.row.box_2 p {
+    font-family: 'Avenir Next Regular';
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.row.box_2 {
+    text-align: center;
+    background: #fff;
+    box-shadow: 4px 4px 40px #ccc;
+    border-radius: 35px;
+    padding: 12px 0px;
+    position: relative;
+}
+
+.row.box_2 a.btn1 {
+    width: 240px;
+    height: 63px;
+    border-radius: 60px;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.box_2_main:before {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23504.png?v=1692300776) no-repeat;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 587px;
+    height: 218px;
+    background-size: 100%;
+    content: "";
+}
+.sec-faq .set {
+  padding: 10px 0;
+}
+.sec-faq .set .content p {
+    margin: 0;
+}
+.sec_faq_inner {
+    background: #fff;
+    box-shadow: 4px 4px 40px #ccc;
+    border-radius: 35px;
+    padding: 20px 30px 14px 30px;
+    position: relative;    margin-right: 15px;
+}
+.skydive {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23474_9f49a7fe-f69c-42b2-981a-d51bd5c92321.png?v=1692304932) no-repeat;
+    padding: 50px 50px 19px 50px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    text-transform: inherit;
+    font-family: 'Avenir Next Regular';
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    background-size: cover;
+     position: relative;
+    border-radius: 30px;
+}
+.skydive h3 {
+    font-size: 40px;
+    text-transform: inherit;
+    font-family: 'Avenir Next Regular';
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+}
+section#skydive {
+    background: #f8faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1.png?v=1692304931) no-repeat;
+    padding: 0 177px 100px 177px;
+    background-position: right 150px;
+}
+.skydive:before {
+    content: "";
+    position: absolute;
+    left: -89px;
+    bottom: -178px;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Ellipse_1998.png?v=1692305480) no-repeat;
+    width: 324px;
+    height: 324px;
+    background-size: 200px;
+}
+.skydive p {
+    width: 66%;
+    margin: 0 auto;    margin-top: 20px;
+}
+section.copyrights.text-center {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Vector_3_99e02f0e-0c13-4dfa-87e3-f9067839133b.png?v=1692307386) no-repeat;
+    padding: 16px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: 'Avenir Next Regular';
+}
+section.footer_sec.sec-faq {
+    padding-left: 0;
+}
+.col-sm-6.footer-logo.nopad {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+footer.site-footer {
+    display: none;
+}
+section.footer_sec.sec-faq .set a {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+section.footer_sec.sec-faq .set a.active {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+section.footer_sec.sec-faq .set p {
+    color: #545454;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Avenir Next Regular';
+}
+section.footer_sec.sec-faq .set .content {
+    padding-left: 0;
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 20px;
+    line-height: 24.59px;
+    color: #545454;
+    font-family: 'Avenir Next Regular';
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #D2D8E1;
+}
+section.footer_sec.sec-faq .set {
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 4px 4px 40px #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+section.footer_sec.sec-faq .sec_faq_inner {
+    background: transparent;
+    box-shadow: none;
+}
+section.footer_sec.sec-faq .sec_faq_inner1:before{
+  display:none;
+}
+.row.box_2 h3 {
+    font-size: 24px;
+}
+section.featured_on .right_text_blueline p {
+    width: 100% !important;
+}
+.row.right_section_bg {
+    padding: 50px 15px 30px 15px;
+}
+button.needsclick.go3894874857.kl-private-reset-css-Xuajs1 {
+    border-radius: 0 !important;
+}
+section.featured_on .box_text_bottom p {
+    font-size: 18px;
+    font-family: 'Avenir Next Regular';
+    line-height: 30px;
+    font-weight: 400;
+    padding: 30px;
+    color: #000;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+section.featured_on .box_text_bottom p br {
+    display: none;
+}
+section.featured_on .right_text_blueline p strong {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #1699F8;
+}
+.klaviyo-form-R8wb3Z.klaviyo-form.form-version-cid-1 {
+    float: none;
+}
+section.featured_on.featured_on_block form.needsclick.klaviyo-form.klaviyo-form-version-cid_2.kl-private-reset-css-Xuajs1 {
+    max-width: 64% !important;
+}
+section.sec_home form.needsclick.klaviyo-form.klaviyo-form-version-cid_3.kl-private-reset-css-Xuajs1 {
+    max-width: 80% !important;
+}
+#sync2 .owl-item {
+    border: 1px solid #1699F8;
+}
+.coming_soon_btn a {
+    text-decoration: none !important;
+    cursor: none;
+}
+.featured-logos img {
+    /* display: inline-block; */
+    width: 11%;
+    /* float: left; */
+    padding: 5px;
+}
+.featured-logos {
+    background: #ebf1f9;
+    display: flex;
+    display: inline-flex;
+    border-radius: 20px;
+    padding: 20px;    margin: 0 17px;
+}
+section.no_jitters {
+    padding: 100px 177px;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1_44401ee0-145a-4b6f-9039-39cf5e13fb6c.png?v=1692648816) no-repeat;
+    background-position: right 68% !important;
+    text-align: left;
+    position: relative;
+}
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+    max-width: 50% !important;
+}
+.modal-header {
+    border: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+.love_about_coffee_image_inner {
+    margin-top: 35px;
+}
+section.sec_home {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Banner.jpg?v=1692651936);
+    background-size: cover;
+    background-position: bottom right;
+}
+section.featured_on .row.row_logos .col-sm-4 {
+    width: 33.33%;
+    max-width: 33.33%;
+}
+.taste_pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+section.featured_on p {
+    width: 90%;
+}
+.close {
+  color: #1699F8;
+}
+div#shopify-section-waitlist_featured_on {
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004313.png?v=1692734441) no-repeat !important;
+    background-position: 0 -195px !important;
+ 
+}
+.love_about_coffee_image_inner img {
+    height: 1040px;
+    object-fit: cover;
+    object-position: right bottom;
+    border-radius: 30px;
+}
+.featured_on {
+    padding-bottom: 40px;
+}
+.modal-header {
+    position: absolute;
+    z-index: 9999;
+    top: 20px;
+    opacity: 1;
+}
+.close {
+    color: #1699F8;
+    opacity: 1;
+}
+.modal-body {
+    padding: 0;
+}
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+    max-width: 50% !important;
+    border-radius: 25px;
+    overflow: hidden;
+}
+section.no_jitters {
+    padding: 100px 177px;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/7.png?v=1692739457) no-repeat;
+    background-position: right 134% !important;
+    text-align: left;
+    position: relative;
+    background-size: 45%;
+    padding-bottom: 50px;
+}
+.modal-header {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    opacity: 1;
+    left: -10px;
+}
+.robert_k_image img {
+    display: block;
+    margin: 0;
+    width: 88% !important;
+ 
+}
+div#owl-demo-2.owl-carousel.owl-drag .owl-item.cloned:not(.active) .author_bottom_info {
+    margin-left: 0;
+}
+div#owl-demo-2.owl-carousel.owl-drag .owl-item.cloned:not(.active) img {
+    margin-left: 0 !important;
+}
+section.health_experts {
+    padding: 100px 177px;
+    background: #f7faff;
+    padding-top: 0;
+}
+section.health_experts .row_flex .col-sm-6{
+    padding-left:0;
+}
+section.no_jitters {
+    padding: 100px 177px;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/7.png?v=1692739457) no-repeat;
+    background-position: right 134% !important;
+    text-align: left;
+    position: relative;
+    background-size: 45%;
+    padding-bottom: 116px;
+}
+@media screen and (min-width:1920px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1920px;
+}
+
+}
+
+@media screen and (min-width:1100px){
+.taste h3 {
+    margin-top: 10px !important;
+}
+
+section.featured_on .taste p {
+    margin-bottom: 5px !important;
+}
+.love_about_coffee_image_inner img {
+    height: 1017px !important;
+    object-fit: cover;
+    object-position: right bottom;
+    border-radius: 30px;
+}
+}
+@media screen and (max-width:1600px){
+
+.home_content h1 {
+    font-family: 'Avenir Next Bold';
+    font-size: 45px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 57px;
+    margin-top: 50px;
+}
+section.featured_on h2 {
+    font-family: 'Avenir Next Bold';
+    font-size: 50px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 80px;
+    margin-top: 50px;
+    /* font-family: 'Avenir Next Regular'; */
+    font-weight: 700;
+    letter-spacing: 0;
+    text-align: left;
+}
+section.featured_on .right_text_blueline p {
+    font-size: 26px;
+    font-weight: 400;
+    color: #454545;
+    font-family: 'Avenir Next Regular';
+}
+section.featured_on .right_text_blueline p strong {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #1699F8;
+}
+.featured_on {
+    padding: 27px 50px;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group.png?v=1692132322) no-repeat !important;
+    background-position: center center;
+    text-align: center;
+    position: relative;
+}
+.love_about_coffee_image_inner img {
+    height: 1142px;
+    object-fit: cover;
+    object-position: right bottom;
+    border-radius: 30px;
+}
+section.no_jitters {
+    padding: 100px 50px;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/7.png?v=1692739457) no-repeat;
+    background-position: right 103% !important;
+    text-align: left;
+    position: relative;
+    background-size: 42%;
+    padding-bottom: 50px;
+}
+section.health_experts {
+    padding: 100px 70px;
+    background: #f7faff;
+    padding-top: 0;
+}
+button.owl-next {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004231.png?v=1692224618) no-repeat !important;
+    width: 70px;
+    height: 70px;
+    font-size: 0 !important;
+    font-size: 0 !important;
+    position: absolute;
+    right: -38px;
+    left: auto;
+    top: 42%;
+    transform: rotate(0deg);
+    bottom: 0;
+}
+.neubrain_heading .neubrain_heading_inner h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 40px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+}
+section.Ingredients {
+    background: #f8faff;
+    padding: 100px 50px;
+}
+section.sec-faq {
+    background: #f8faff;
+    padding: 0 50px 100px 50px;
+}
+.sec-faq .set > a:before {
+  margin: 0px 0 0;
+}
+.robert_k_content {
+    padding: 19px;
+    margin-left: -30px;
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 12px;
+}
+section.health_experts p {
+    margin-bottom: 0;
+}
+section.health_experts h4 {
+    font-family: 'Avenir Next Bold';
+    font-size: 26px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 60px;
+    font-weight: 600;
+    margin: 0;
+}
+}
+section.footer_sec.sec-faq .set .content {
+    padding: 20px;
+}
+section.footer_sec.sec-faq .set a {
+    padding: 20px;
+}
+section.footer_sec.sec-faq .set {
+    padding: 0;
+}
+section.footer_sec.sec-faq  .set > a:before {
+    margin: 0;
+}
+section.footer_sec.sec-faq .set.active_tab {
+    padding: 10px 0;
+    background: #fff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23507_1.png?v=1692823785) no-repeat;
+    box-shadow: 4px 4px 40px #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 22px;
+    background-position: right bottom;
+    background-size: cover;
+    overflow: hidden;
+}
+.skydive:before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    bottom: -150px;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Ellipse_1998.png?v=1692305480) no-repeat;
+    width: 324px;
+    height: 324px;
+    background-size: 200px;
+}
+.featured_on {
+    padding: 27px 177px;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/bg_10.png?v=1692825866) no-repeat !important;
+    background-position: center center;
+    text-align: center;
+    position: relative;
+}
+.box_2_main:before {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23504_1.png?v=1692826269) no-repeat;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 587px;
+    height: 218px;
+    background-size: 100%;
+    content: "";
+}
+.sec_faq_inner {
+    padding: 33px 30px 26px 30px;
+}
+.featured_on {
+    background-size: cover !important;
+}
+.hidden.only_for_mobile {
+    display: none;
+}
+.footer-faq-heading {
+    font-size: 40px;
+    color: #454545;
+    font-weight: 600;
+    display: block;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.col-sm-6.footer-logo.nopad {
+    display: block;
+    padding-left: 177px;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/footer_log_bg.png?v=1693245564) no-repeat;
+    padding: 177px;
+    background-position: center left;
+}
+section.footer_sec.sec-faq .row {
+    align-items: center;
+}
+  @media screen and (min-width:1100px) and (max-width:1600px){
+section.featured_on.featured_on_block form.needsclick.klaviyo-form.klaviyo-form-version-cid_2.kl-private-reset-css-Xuajs1 {
+    max-width: 80% !important;
+}
+.love_about_coffee_image_inner img {
+    height: 1296px;
+    object-fit: cover;
+    object-position: right bottom;
+    border-radius: 30px;
+}
+.love_about_coffee_image_inner {
+    margin-top: 35px;
+    border-radius: 30px;
+}
+.home_content h1 {
+    font-size: 44px;
+}
+.featured_on {
+    padding: 27px 50px;
+}
+.love_about_coffee_image_inner img {
+    height: 1144px;
+}
+section.custom_slider_sec .container {
+    padding: 0;
+}
+    
+  }
+@media screen and (max-width:1100px){
+section.sec_home .row:first-child {
+    display: inline-block;
+    width: 100%;
+}
+  section {
+    padding: 100px 0 !important;
+}
+section.featured_on .right_text_blueline {
+    margin-right: 0;
+}
+section.sec_home {
+    padding-top: 65px !important;
+}
+.home_content h1 {
+    font-family: 'Avenir Next Bold';
+    font-size: 39px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 54px;
+    margin-top: 50px;
+}
+.kl-private-reset-css-Xuajs1.go3176171171 span {
+    font-size: 25px !important;
+}
+ 
+section.sec_home {
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Banner.jpg?v=1692651936);
+    background-size: cover;
+    background-position: top right;
+    background-size: 100%;
+    background-repeat: no-repeat !important;
+    padding-bottom: 0 !important;
+}
+div#owl-demo-3 {
+    border-radius: 20px !important;padding: 0 30px !important;
+}
+section.custom_slider_sec {
+    padding-bottom: 0 !important;
+}
+section.featured_on.featured_on_logos {
+    padding-top: 65px !important;
+    background-position: top center !important;
+}
+section.featured_on h2 {
+    font-size: 34px;    line-height: 30px;
+}
+section.featured_on p {
+    font-size: 24px;
+    line-height: 32px;
+}
+section.featured_on .right_text_blueline p strong {
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #1699F8;
+}
+section.featured_on .right_text_blueline p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #454545;
+    font-family: 'Avenir Next Regular';
+}
+section.featured_on .taste p {
+    color: #545454;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Avenir Next Regular';
+    text-align: left;
+    line-height: 17px;
+}
+section.featured_on .box_text_bottom p {
+    font-size: 12px;    line-height: 22px;
+}
+.box_text_bottom strong {
+    font-size: 12px;    line-height: 22px;
+}
+section.featured_on.featured_on_block form.needsclick.klaviyo-form.klaviyo-form-version-cid_2.kl-private-reset-css-Xuajs1 {
+    max-width: 100% !important;
+}
+.needsclick.kl-private-reset-css-Xuajs1 {
+    min-height: auto !important;
+}
+.love_about_coffee_image_inner img {
+    height: 942px;
+    object-fit: cover;
+    object-position: right bottom;
+    border-radius: 30px;
+} 
+.no_jitters_sec h3 {
+    font-size: 17px;
+}
+.no_jitters_sec p {
+    font-family: 'Avenir Next Regular';
+    font-size: 14px;
+    line-height: 22px;
+    color: #545454;
+    font-weight: 500;
+}
+.no_jitters_sec img {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 110px;
+}
+.center_image img {
+    border-radius: 30px;
+    position: relative;
+    z-index: 99;
+    width: 296px;
+    height: 246px;
+    object-fit: cover;
+}
+.no_jitters_sec {
+    width: 216px;
+    height: 140px;
+    padding: 48px 20px;    margin-bottom: 50px;
+}
+.center_image:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23483.png?v=1692216343) no-repeat;
+    width: 587px;
+    height: 323px;
+    width: 201px;
+    height: 129px;
+    border-radius: 20px;
+}
+.center_image:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23483.png?v=1692216343) no-repeat;
+    width: 201px;
+    height: 129px;
+    border-radius: 20px;
+}
+section.health_experts h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 30px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 80px;
+}
+.neubrain_heading .neubrain_heading_inner h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 29px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+}
+.neubrain_heading .neubrain_heading_inner p {
+    font-family: 'Avenir Next Regular';
+    font-size: 30px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin-bottom: 20px;
+}
+  #sync2 .owl-item {
+    width: 90px !important;
+    height: 90px !important;
+    margin: 15px;
+    transition: all .2s ease;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+#sync2 .owl-item.active.current{
+    width: 130px !important;
+    height: 130px !important;
+}
+#sync1 p {
+    color: #545454;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: 'Avenir Next Regular';
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+#sync1 h5 {
+    font-size: 22px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #000;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+section.Ingredients h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 30px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+    margin-bottom: 40px;
+}
+section.Ingredients .premium h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 30px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.ingredients_pic img {
+    margin-top: 0;
+    margin-right: 0px !important;
+    position: absolute;
+    right: 0;
+    border-radius: 30px;
+    height: auto;
+}
+.tabs-menu li a {
+    padding: 5px 20px;
+}
+div#tabs-container .col-sm-3 {
+    padding-right: 0;
+}
+.tabs-menu {
+    height: auto;
+    padding: 35px 0;
+}
+a.btn1 {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23471.png?v=1692296260) no-repeat;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 60px;
+    background-size: cover;
+    padding: 20px 30px;
+    margin-top: 10px;
+    display: inline-block;
+    background-size: 100%;
+    text-decoration: none !important;
+}
+.col-sm-6.sec_faq_inner1 {
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 59px;
+}
+.col-sm-6.box_2_main {
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 59px;
+}
+.skydive h3 {
+    font-size: 30px;
+    text-transform: inherit;
+    font-family: 'Avenir Next Regular';
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+}
+.skydive p {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.skydive {
+    padding: 50px 20px;
+}
+section.copyrights.text-center {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Vector_3_99e02f0e-0c13-4dfa-87e3-f9067839133b.png?v=1692307386) no-repeat;
+    padding: 16px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: 'Avenir Next Regular';
+    background-position: center center;
+}
+.col-sm-6.right_section {
+    /* padding-right: 30px; */
+    margin-left: -15px;
+} 
+.col-sm-6.right_section {
+    /* padding-right: 30px; */
+    margin-left: -15px;
+}
+
+section.no_jitters {}
+
+section.no_jitters .col-sm-3 {
+    width: 216px;
+    max-width: 216px;
+}
+
+section.no_jitters .col-sm-6 {
+    width: 296px;
+    max-width: 296px;
+}
+
+section.no_jitters .col-sm-6 .center_image {
+    margin-left: 5%;
+    width: 100%;
+}
+
+section.no_jitters .col-sm-6 .center_image img {
+    height: 336px;
+}
+.center_image:before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23483.png?v=1692216343) no-repeat;
+    width: 201px;
+    height: 129px;
+    border-radius: 20px;
+}
+.center_image:after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23483.png?v=1692216343) no-repeat;
+    width: 587px;
+    height: 323px;
+    width: 201px;
+    height: 129px;
+    border-radius: 20px;
+}
+  section.health_experts button.owl-prev, section.health_experts button.owl-next {
+    display: none;
+}
+#sync1 button.owl-next {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004238.png?v=1692287420) no-repeat !important;
+    width: 50px;
+    height: 50px;
+    font-size: 0 !important;
+    font-size: 0 !important;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 42%;
+    transform: rotate(180deg);
+    bottom: 0;
+    /* z-index: 9999999999; */
+    background-size: 100% !important;
+}
+  #sync1 button.owl-prev {
+     
+    width: 50px;
+    height: 50px;
+    left: 0;
+    background-size: 100% !important;
+}
+.col-sm-6.sec_faq_inner1 {
+    padding: 30px !important;
+    margin-left: 15px;
+}
+.sec_faq_inner1:before {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23504.png?v=1692300776) no-repeat;
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    width: 587px;
+    height: 218px;
+    background-size: 100%;
+    content: "";
+}
+.col-sm-6.box_2_main {
+    padding: 0 50px 0 30px;
+    margin: 15px;
+}
+.box_2_main:before {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23504_1.png?v=1692826269) no-repeat;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    width: 587px;
+    height: 218px;
+    background-size: 100%;
+    content: "";
+}
+section#skydive {
+    padding-top: 0 !important;
+}
+.skydive {
+    margin: 0 5%;
+    width: 90%;
+    padding-bottom: 0;
+}
+.skydive:before{
+  display:none;
+}
+.skydive {
+    padding: 50px 7px;
+}
+.skydive h3 {
+    font-size: 28px;
+    text-transform: inherit;
+    font-family: 'Avenir Next Regular';
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+}
+section.footer_sec.sec-faq > .container.nopad > .row {
+    margin: 0;
+}
+section.featured_on.featured_on_block {
+    padding-top: 0 !important;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.footer-logo.nopad {
+    max-width: 40%;
+    flex: 0 0 40%;
+}
+
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.footer-logo.nopad .col-sm-6.sec_faq_inner1 {
+    max-width: 60%;
+    flex: 0 0 60%;
+}
+
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.sec_faq_inner1 {
+    max-width: 60%;
+    flex: 0 0 60%;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.sec_faq_inner1 {
+    max-width: 60%;
+    flex: 0 0 60%;
+    margin: 0;
+    padding: 0 !important;
+}
+section.footer_sec.sec-faq .set.active_tab {
+    border-radius: 35px;
+}
+div#shopify-section-wailtlist_accordian section.sec-faq {
+    padding-top: 0 !important;
+}
+.tabs-menu li a {
+    padding: 5px 10px;
+}
+div#owl-demo-2.owl-carousel .owl-stage {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+ section.copyrights.text-center {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Vector_3_99e02f0e-0c13-4dfa-87e3-f9067839133b.png?v=1692307386) no-repeat;
+    padding: 16px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: 'Avenir Next Regular';
+    background-position: center center;
+    background-size: 100% 100%;
+    padding-top: 30px !important;
+} 
+div#owl-demo-2 {}
+
+div#owl-demo-2 .col-sm-6 {
+    width: 100% !important;
+}
+
+div#owl-demo-2 .row.row_flex.item {
+    display: grid;
+    padding: 20px;
+}
+.robert_k_content {
+    padding: 19px;
+    margin-left: 0px;
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 12px;
+}
+div#owl-demo-2.owl-carousel.owl-drag .owl-item {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+div#owl-demo-2 .col-sm-6 {
+    width: 100% !important;
+    float: left;
+    clear: both;
+    max-width: 100% !important;
+}
+.robert_k_image img {
+    display: block;
+    margin: 0;
+    width: 100% !important;
+}
+div#owl-demo-2.owl-carousel.owl-drag .owl-item {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    padding-right: 50px;
+} 
+section.sec_home {
+    background-size: cover;
+    background-position: top right;
+    background-size: 100%;
+    background-repeat: no-repeat !important;
+    padding-bottom: 0 !important;
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/bg.jpg?v=1693234315);
+}
+.home_pic_right {
+    display: block;    margin-top: 65px;
+}
+section.featured_on.featured_on_logos {
+    background-size: 100% 100% !important;
+}
+section.featured_on.featured_on_logos {
+    background-size: 100% 100% !important;
+}
+section.featured_on.featured_on_block .col-sm-6.empty_col {
+    width: 35%;
+    max-width: 35%;
+}
+section.featured_on.featured_on_block .col-sm-6.empty_col + .col-sm-6 {
+    width: 65%;
+    max-width: 65%;
+    flex: 0 0 65%;
+}
+section.no_jitters {
+    background: #f7faff;padding-bottom: 0 !important;
+}
+.ingredients_pic.ingredients_pic_ipad {
+    display: block !important;
+}
+div#shopify-section-waitlist_faq .col-sm-6 {
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+div#shopify-section-waitlist_faq .col-sm-6 + .col-sm-6.nopad {
+    display: none;
+}
+.ingredients_pic img {
+    position: relative;
+    height: 206px;
+    width: auto;
+    left: 0;
+    right: auto;
+    margin: 0;
+    padding: 0;
+    float: right;
+    top: 0;
+}
+section.Ingredients .premium h3 {
+    margin-top: 0;
+}
+.tab-content {
+    padding-bottom: 0;
+}
+a.btn1 {
+    background-size: cover;    padding: 16px 30px;
+}
+section#skydive {
+    padding: 0 !important;
+    background: #f8faff;
+}
+.skydive:after {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/bg1.png?v=1693234314) no-repeat;
+    content: "" !important;
+    position: absolute;
+    right: -36px;
+    z-index: 99999;
+    top: -55px;
+    width: 227px;
+    height: 180px;
+}
+ #sync1 button.owl-next:hover {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 42%;
+    bottom: 0;
+    background-size: 100% !important;
+}
+#sync1 button.owl-prev:hover {
+    width: 50px;
+    height: 50px;
+    left: 0;
+    background-size: 100% !important;
+    position: absolute;
+    left: auto;
+    left: 0;
+    top: 42%;
+    bottom: 0;
+}
+.ingredients_pic img {
+    width: 100%;
+    height: auto;
+}
+section.footer_sec.sec-faq .container.nopad {
+    padding-left: 0;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.footer-logo.nopad {
+    padding-right: 8px;
+    padding-left: 41px;
+    background-size: 130%;
+    background-position: -100px center;
+}
+.footer-faq-heading {
+    font-size: 19px;
+}
+
+section.sec_home .row:first-child {
+    display: inline-block;
+}
+.coming_soon_btn {
+    margin-top: 29px;
+    float: right;
+}
+section.health_experts h3 {
+    margin-bottom: 0;
+}
+div#owl-demo-2 {
+    margin-top: -20px;
+}
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+    max-width: 100% !important;
+    border-radius: 0;
+    overflow: hidden;
+}
+.modal-header .close {
+    padding: 0;
+    margin: -20px -1rem -1rem auto;
+}
+
+.featured-logos {
+    padding: 0;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+.neubrain_heading .neubrain_heading_inner h3 + p {
+    margin: 0;
+}
+.sec-faq .set a.active {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+div#shopify-section-wailtlist_accordian .sec-faq .set .content {
+    padding-left: 60px;
+    padding-right: 0;
+}.sec-faq .set > a, .sec-faq .set a {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+.featured_content.featured_content_mobile {
+    padding: 0 15px;
+}
+section.no_jitters .col-sm-3 {
+    width: 50%;
+    max-width: 50%;
+    padding: 0 5px;
+}
+  .featured-logos img {
+    /* display: inline-block; */
+    width: 9.5%;
+    /* float: left; */
+    padding: 5px;
+}
+} 
+@media screen and (max-width:600px){
+.sec_home .col-sm-5 {
+    width: 100%;
+}
+  section.sec_home {
+    padding-top: 46px !important;
+}
+section.sec_home .row:first-child {
+    display: flex;
+    flex-direction: row-reverse;
+}
+  .coming_soon_btn a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #336CCD;
+    font-family: 'Avenir Next Regular';
+    line-height: 27.32px;
+    background: #336CCD15;
+    padding: 10px 20px;
+    border-radius: 14px;
+}
+section.sec_home .row:last-child {
+    display: block;
+}
+  section.sec_home .row:last-child .col-sm-6{
+    width:100%;
+}
+.home_content h1 {
+    font-family: 'Avenir Next Bold';
+    font-size: 26px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 40px;
+    margin-top: 50px;
+}
+.sec_home .col-sm-7 {
+    width: 100%;
+    padding: 0 10px;
+}
+section.custom_slider_sec {
+    padding-bottom: 0 !important;
+    padding: 0px 0 !important;
+    /* padding-right: 50px !important; */
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23474_1.png?v=1692993121) !important;
+    margin-top: 50px !important;
+    background-repeat: no-repeat !important;
+}
+div.custom_slider div.slide_text {
+    font-size: 18px;
+}
+div#owl-demo-3 {
+    border-radius: 0px !important;
+    padding: 0 0px !important;
+}
+div#owl-demo-3 {
+    background: transparent !important;
+}
+.slide_text.item img {
+    width: 20px !important;
+    height: auto !important;
+    display: inline-block;
+    margin-top: 3px;
+    float: left;
+    margin-right: 5px;
+}
+section.featured_on h5 {
+    color: #454545;
+    font-size: 24px;
+    font-family: 'Avenir Next Bold';
+    line-height: 54.64px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+}
+section.featured_on .row_logos {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+section.featured_on.featured_on_logos {
+    padding-top: 5px !important;
+    background-position: top center !important;
+}
+section.featured_on h2 {
+    font-size: 18px;
+    line-height: 20px;
+    color: #1699F8;margin: 0;
+}
+section.featured_on p {
+    font-size: 18px;
+    line-height: 21px;
+    width: 100% !important;
+}
+.col-sm-6.empty_col {
+    display: none;
+}
+.col-sm-6.empty_col+.col-sm-6 {
+    width:100%;
+}  
+.col-sm-6.love_about_coffee_image {
+    display: none;
+}
+.col-sm-6.right_section {
+    width: 90% !important;
+    margin-left: 5%;
+}
+
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-8,
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-8 {
+    width: 50%;
+    padding: 0;
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-4,
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-4 {
+    width: 50%;
+    max-width: 50%;
+}
+.row.right_section_bg .col-sm-6  {
+    width: 100%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1),
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2){
+    width:50%;
+}
+.taste_pic img {
+    width: 85px !important;
+    margin-top: -12px;
+}
+.row.right_section_bg {
+    padding: 50px 10px 30px 0;
+}
+.featured-logos {
+    background: transparent;
+    display: block;
+}
+
+.featured-logos img {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+.box_text_bottom {
+    display: block;
+    float: left;
+    clear: both;
+    display: none;
+}
+.klaviyo-form-WKyQCa.klaviyo-form.form-version-cid-2 {
+    padding: 0 30px !important;
+}
+.hidden.only_for_mobile {
+    display: block;
+}
+section.no_jitters .col-sm-6 {
+    width: 296px;
+    max-width: 296px;
+    display: none;
+}
+section.no_jitters .col-sm-3 {
+    width: 50%;
+    max-width: 50%;
+}
+.no_jitters_sec {
+    width: 100%;
+    height: auto;
+    padding: 15px !important;
+    padding-top: 50px !important;
+    padding-bottom: 0 !important;
+}
+.neubrain_heading .neubrain_heading_inner h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 20px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+}
+.neubrain_heading .neubrain_heading_inner p {
+    font-family: 'Avenir Next Regular';
+    font-size: 20px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin-bottom: 20px;
+}
+#sync1 p {
+    color: #545454;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: 'Avenir Next Regular';
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+div#sync1 .item {
+    padding: 20px !important;
+    margin: 15px !important;
+}
+#sync1 h5 {
+    font-size: 16px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #000;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+#sync1 button.owl-next,
+#sync1 button.owl-prev {
+    width: 36px;
+    height: 36px;
+}
+section.Ingredients h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 24px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+    margin-bottom: 40px;
+}
+div#tabs-container .row {
+    display: block;
+}
+
+div#tabs-container .row .col-sm-3 {
+    width: 100%;
+}
+
+.tabs-menu li {
+    display: inline-block;
+}
+
+.tabs-menu li a {
+    font-size: 14px;
+}
+
+.tabs-menu .current a {
+    border-left: 0;
+    border-bottom: 4px solid;
+}
+section.Ingredients .premium h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 24px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.premium p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #545454;
+}
+.premium strong {
+    color: #1699F8;
+    font-size: 20px;
+    text-transform: inherit !important;
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 600;
+}
+ a.btn1 {
+    /* padding-bottom: 20px !important; */
+    background-size: 100% 100%;
+}
+.sec-faq .set a.active {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.sec-faq .set > a,
+.sec-faq .set a {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.sec-faq .set p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 22px;
+}
+.sec_faq_inner {
+    padding: 20px;
+}
+.sec_faq_inner1:before {
+    bottom: auto;
+    top: 18px;
+    width: 60%;
+    height: 100%;
+    border-radius: 20px;
+    left: 17px;
+}
+.col-sm-6.sec_faq_inner1 {
+    padding: 30px !important;
+    margin-left: 0;
+}
+.box_2_main:before {
+    width: 70%;
+    height: 100%;
+}
+.sec_faq_inner {
+ 
+    border-radius: 20px;
+}
+.row.box_2 {
+    text-align: center;
+    background: #fff;
+    box-shadow: 4px 4px 40px #ccc;
+    border-radius: 20px;
+    padding: 12px 0px;
+    position: relative;
+}
+.box_2_inner img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.row.box_2 h3 {
+    font-size: 20px;
+}
+.row.box_2 p {
+    font-family: 'Avenir Next Regular';
+    font-size: 20px;
+    font-weight: 400;
+}
+.skydive h3 {
+    font-size: 20px;
+    text-transform: inherit;
+    font-family: 'Avenir Next Regular';
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+}
+.skydive p {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 14px;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.footer-logo.nopad {
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.sec_faq_inner1 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin: 0;
+    padding: 0 !important;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq {
+    padding-bottom: 0 !important;
+}
+ section.copyrights.text-center {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Vector_3_99e02f0e-0c13-4dfa-87e3-f9067839133b.png?v=1692307386) no-repeat;
+    padding: 16px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: 'Avenir Next Regular';
+    background-position: center center;
+    background-size: 100% 100%;
+    padding-top: 30px !important;
+} 
+#sync2 .owl-item.active.current {
+    width: 90px !important;
+    height: 90px !important;
+}
+#sync2 .owl-item {
+    width: 50px !important;
+    height: 50px !important;    margin: 5px;
+}
+div#owl-demo-2.owl-carousel.owl-drag .owl-item {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 15px !important;
+}
+div#owl-demo-2 .row.row_flex.item {
+    display: grid;
+    padding: 20px;
+    margin-left: 0 !important;
+    padding-right: 0px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+section.health_experts h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 24px;
+    text-transform: inherit;
+    color: #454545;
+    line-height: 34px;
+}
+section.custom_slider_sec {
+    background-size: cover !important;
+}
+section.featured_on.featured_on_logos {
+    padding-top: 5px !important;
+    background-position: top center !important;
+    background: #f7faff !important;
+    padding-bottom: 50px !important;
+}
+section.featured_on.featured_on_block .col-sm-6.empty_col + .col-sm-6 {
+    width: 80%;
+    max-width: 80%;
+    flex: 0 0 80%;
+    float: right;
+    margin-left: 20%;
+}
+  section.featured_on.featured_on_block .col-sm-6.empty_col {
+    width: 35%;
+    max-width: 35%;
+    display: none;
+}
+section.featured_on .right_text_blueline p {
+    font-size: 12px;
+    font-weight: 700;
+    color: #454545;    margin: 0;
+    font-family: 'Avenir Next Regular';
+}
+section.featured_on .right_text_blueline p strong {
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #1699F8;
+}
+section.featured_on .right_text_blueline {
+    margin-right: 0;
+    margin-top: 0;
+}
+.featured-logos img {
+    width: 50%;
+    float: left;
+    padding: 21px;
+}
+.row.right_section_bg {
+    padding: 50px 0 30px 0;
+}
+.hidden.only_for_mobile img {
+    margin: 0;
+    width: 100%;
+}
+.row.right_section_bg .row.row_flex {
+    margin: 0;
+}
+div#shopify-section-waitlist_no_jitters section.no_jitters {
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/bg3.png?v=1693234316);
+    background-repeat: no-repeat;
+    background-position: 0px 99px!important;
+    background-size: 100%;
+    padding-bottom: 300px !important;
+}
+div#shopify-section-waitlist_health_experts {
+    margin-top: -340px;
+}
+section.health_experts {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+section.neubrain {
+    padding-bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Vector_4.png?v=1693238447) no-repeat;
+    background-size: cover;
+}
+#sync1 button.owl-next:hover {
+    width: 50px;
+    height: 50px;
+    font-size: 0 !important;
+    font-size: 0 !important;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 42%;
+    bottom: 0;
+    background-size: 100% !important;
+    width: 36px;
+    height: 36px;
+}
+#sync1 button.owl-prev:hover {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: auto;
+    left: -70px;
+    top: 42%;left: 0;
+    background-size: 100% !important;
+    bottom: 0;
+}
+.ingredients_pic img {
+    display: none;
+}
+.ingredients_pic img.for_mobile_only {
+    display: block !important;
+    margin-bottom: 30px;
+}
+.tabs-menu {
+    background-position: left;
+}
+.tabs-menu li {
+    display: inline-block;
+    float: left;
+    clear: none;
+    width: auto;
+}
+ul.tabs-menu {
+    display: none;
+}
+ul#tabs_slider_mobile {
+    display: block !important;
+    padding: 0;
+    background: transparent url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23518.png?v=1693240943) no-repeat;
+    height: 54px;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 0 20px;
+    width: 96%;
+}
+.tabs-menu .current a {
+    border-left: 0;
+    border-bottom: 0;
+}
+.tabs-menu .owl-item.active.center a:before {
+    content: "";
+    width: auto;
+    height: auto;
+    padding: 3px;
+    z-index: 999;
+    display: block;
+    border-radius: 60px;
+    left: 0;
+    right: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23498.png?v=1693241253) no-repeat;
+    background-size: auto;
+    background-position: center center !important;
+    top: auto;
+    bottom: 0;
+    position: absolute;
+}
+.tabs-menu li a:before {
+    content: "";
+    width: auto;
+    height: auto;
+    padding: 3px;
+    z-index: 999;
+    display: block;
+    border-radius: 60px;
+    left: 0;
+    right: 0;
+    background: transparent;
+    background-size: auto;
+    background-position: center center !important;
+    top: auto;
+    bottom: 0;
+    position: absolute;
+}
+.tabs-menu .owl-item.active.center a:before {
+    content: "";
+    width: auto;
+    height: auto;
+    padding: 3px;
+    z-index: 999;
+    display: block;
+    border-radius: 60px;
+    left: 0;
+    right: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23498.png?v=1693241253) no-repeat;
+    background-size: auto;
+    background-position: center center !important;
+    top: auto;
+    bottom: 0;
+    position: absolute;
+  opacity:0;
+} 
+.tabs-menu li a {
+    font-size: 14px;
+    padding: 11px 10px;
+}
+div#tabs-container {
+    border-radius: 22px;
+}
+.tabs-menu .current a {
+    color: #000;
+}
+.tabs-menu .owl-item.active.center a {
+    /*color: #1699F8;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23498.png?v=1693241253) no-repeat;
+    background-size: auto;
+    background-position: bottom center;*/
+}
+.tabs-menu li a {
+    font-size: 14px;
+    padding: 11px 10px;
+    margin: 0 !important;
+    border: 0;
+}
+.tabs-menu li   {
+ 
+    margin: 0 !important;
+    border: 0;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.footer-logo.nopad {
+    padding-right: 8px;
+    padding-left: 41px;
+    background-size: 100%;
+    background-position: center center;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 50px 30px;
+}
+section.footer_sec.sec-faq {
+    padding-top: 20px !important;
+}
+section.footer_sec.sec-faq .set.active_tab {
+    background: #fff;
+    border-right: 4px solid #1699F8 !important;
+    border-bottom: 4px solid #1699F8 !important;
+}
+section.footer_sec.sec-faq .sec_faq_inner {
+    background: transparent;
+    box-shadow: none;
+    margin-right: 0;
+}
+body.template-page {
+    overflow-x: hidden;
+}
+section.custom_slider_sec .owl-carousel.owl-drag .owl-item {
+    width: auto !important;
+    margin-right: 30px;
+}
+.main-content {
+    overflow-x: hidden;
+}
+.owl-dots {
+    text-align: center;
+    margin-top: -35px;
+    margin-bottom: 30px;
+}
+button.owl-dot.active {
+    background: #1699F8 !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+button.owl-dot {
+    background: #CFDFEA !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.featured-logos img {
+    width: 33%;
+    float: left;
+    padding: 15px 0;
+}
+.featured-logos {
+    padding-bottom: 20px;
+    display: inline-block;
+}
+ .coming_soon_btn a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #336CCD;
+    font-family: 'Avenir Next Regular';
+    line-height: 27.32px;
+    background: #336CCD15;
+    padding: 10px 20px;
+    border-radius: 14px;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1), section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) {
+    width: 100%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-4, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-4 {
+    width: 30%;
+    max-width: 30%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-8, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-8 {
+    width: 70%;
+    padding: 0;
+    max-width: 70%;
+    flex: 0 0 70%;
+}
+div#shopify-section-wailtlist_accordian .sec-faq .set .content {
+    padding-left: 0;
+}
+#sync2 .owl-item {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0px;
+}
+section.sec_home .needsclick.kl-private-reset-css-Xuajs1:nth-child(4) {
+    display: block !important;
+}
+section.featured_on.featured_on_block .needsclick.kl-private-reset-css-Xuajs1:nth-child(3) {
+    display: block !important;
+}
+section#skydive .needsclick.kl-private-reset-css-Xuajs1:nth-child(1) {
+    display: block !important;
+}
+  .coming_soon_btn {
+    margin-top: 29px;
+    float: left;
+}
+.logo {
+    float: right;
+}
+.home_content {
+    text-align: center;
+}
+section.custom_slider_sec {
+    margin-top: 0 !important;
+}
+section.sec_home {
+    background-position: bottom center !important;
+}
+section.featured_on h5 {
+    margin-bottom: 10px;
+}
+section.featured_on.featured_on_block .col-sm-6.empty_col + .col-sm-6 {
+    width: 95%;
+    max-width: 95%;
+    flex: 0 0 95%;
+    float: right;
+    margin-left: 10%;
+}
+.taste_pic img {
+    width: 85px !important;
+    margin-top: -15px;
+}
+.featured-logos img {
+    width: 33%;
+    float: left;
+    padding: 15px 0;
+}
+.featured-logos {
+    padding-bottom: 20px;
+    display: inline-block;
+}
+div#shopify-section-waitlist_no_jitters section.no_jitters {
+    padding-top: 0 !important;
+}
+section.neubrain {
+    padding: 50px 0 !important;
+    margin-top: -100px;
+}
+section.Ingredients {
+    padding: 50px 0 !important;
+}
+.premium {
+    text-align: center;
+}
+section.Ingredients .premium h3 {
+    text-align: left;
+}
+.premium div {
+    text-align: left;
+}
+.sec_faq_inner1:before {
+    bottom: auto;
+    top: 18px;
+    width: 159px;
+    height: 218px;
+    border-radius: 20px;
+    left: 17px;
+    background-size: cover;
+}
+.col-sm-6.sec_faq_inner1 {
+    padding-bottom: 0 !important;
+}
+.box_2_main:before {
+    width: 70%;
+    height: 100%;
+    width: 159px;
+    height: 218px;
+    background-size: cover;
+    border-radius: 20px;
+}
+.featured_content.featured_content_mobile {
+    display: block !important;
+}
+span.span1 {
+    color: #1699F8;
+    font-weight: 700;
+}
+.featured_content {
+    display: none;
+}
+section.Ingredients .owl-dots,
+section.neubrain .owl-dots,
+section.custom_slider_sec .owl-dots {
+    display: none !important;
+}
+  
+section.sec_home .row:first-child {
+    display: inline-block;
+}
+.coming_soon_btn {
+    margin-top: 29px;
+    float: right;
+}
+section.health_experts h3 {
+    margin-bottom: 0;
+}
+div#owl-demo-2 {
+    margin-top: -20px;
+}
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+    max-width: 100% !important;
+    border-radius: 0;
+    overflow: hidden;
+}
+.modal-header .close {
+    padding: 0;
+    margin: -20px -1rem -1rem auto;
+}
+.featured-logos img {
+    width: 25%;
+    float: left;
+    padding: 15px 0;
+}
+.featured-logos {
+    padding: 0;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+.neubrain_heading .neubrain_heading_inner h3 + p {
+    margin: 0;
+}
+.sec-faq .set a.active {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+div#shopify-section-wailtlist_accordian .sec-faq .set .content {
+    padding-left: 60px;
+    padding-right: 0;
+}.sec-faq .set > a, .sec-faq .set a {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+.featured_content.featured_content_mobile {
+    padding: 0 15px;
+}
+section.no_jitters .col-sm-3 {
+    width: 50%;
+    max-width: 50%;
+    padding: 0 5px;
+}
+  .skydive {
+    padding: 50px 7px;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23521.png?v=1693427609) no-repeat;
+    background-size: cover;
+}
+  .klaviyo-form-WKyQCa.klaviyo-form.form-version-cid-2 {
+    padding: 30px 30px !important;
+}
+  section.sec_home .row:first-child {
+    display: inline-block;
+    width: 100%;
+}
+  section.sec_home .col-sm-6:last-child {
+    padding-right: 0;
+}
+  div#shopify-section-waitlist_no_jitters section.no_jitters {
+    background: #f7faff url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/bg3.png?v=1693234316);
+    background-repeat: no-repeat;
+    background-position: 0 -20px !important;
+    background-size: 100%;
+    padding-bottom: 300px !important;
+}
+  section.neubrain {
+    padding-bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Vector_4.png?v=1693238447) no-repeat !important;
+    background-size: cover !important;
+    background-position: left center !important;
+    margin-top: 0 !important;
+}
+  section.health_experts {
+    padding-bottom: 50px !important;
+}
+  #sync1 button.owl-next {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004237.png?v=1692287359) no-repeat !important;
+    background-size: 35px !important;    transform: rotate(0deg) !important;
+}
+  .featured-logos img {
+    width: 25%;
+    float: left;
+    padding: 15px 0;
+}
+  section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-4, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-4 {
+    width: 45%;
+    max-width: 45%;
+    padding-right: 0 !important;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-8, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-8 {
+    width: 55%;
+    padding: 0;
+    max-width: 55%;
+    flex: 0 0 55%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1), section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) {
+    width: 50%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .taste_pic,
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .taste_pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 -5px;
+}
+.row.right_section_bg {
+    padding: 30px 0 30px 0;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.footer-logo.nopad {
+    text-align: center;
+}
+section.sec_home {
+    padding-top: 36px !important;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) {
+    padding-right: 0;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) {
+    padding-left: 0;
+}
+.row.right_section_bg {
+    padding: 20px 0 30px 0;
+}
+section.featured_on .taste h3+p {
+    margin-bottom: 5px;
+}
+section.featured_on.featured_on_block {
+    padding-bottom: 50px !important;
+}
+section.health_experts h3 {
+    padding: 0 50px !important;
+}
+section.health_experts {
+    padding-bottom: 15px !important;
+}
+section.neubrain {
+    padding-bottom: 30px !important;
+}
+section.Ingredients {
+    padding-bottom: 40px !important;
+}
+.col-sm-6.sec_faq_inner1 {
+    margin-bottom: 40px !important;
+}
+div#shopify-section-wailtlist_accordian section.sec-faq {
+    padding-bottom: 40px !important;
+}
+.col-sm-6.box_2_main {
+    margin: 15px 0 !important;
+    margin-left: 0;
+}
+div#shopify-section-wailtlist_accordian section.sec-faq .container {
+    padding: 0 10px;
+}
+section.copyrights.text-center {
+    padding-bottom: 80px !important;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.sec_faq_inner1 {
+    margin-bottom: 0 !important;
+}
+.col-sm-6.sec_faq_inner1 .sec_faq_inner {
+    margin-right: 0 !important;
+}
+section.footer_sec.sec-faq .sec_faq_inner {
+    padding-right: 0 !important;
+}
+.skydive {
+    margin: 0 5%;
+    width: 92%;
+    padding-bottom: 0;
+    margin-left: 15px;
+    margin-right: 0 !important;
+}
+div#shopify-section-wailtlist_accordian .col-sm-6.sec_faq_inner1 {
+    padding-right: 20px !important;
+}
+div#shopify-section-waitlist_testimonials .container {
+    padding: 0 9px;
+}
+section.custom_slider_sec .slide_text.item {
+    display: inline-block;
+    color: #fff;
+}
+div#owl-demo-3 {
+    display: none !important;
+}
+section.custom_slider_sec .slide_text.item {
+    display: inline-block;
+    color: #fff;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+section.custom_slider_sec .hidden.only_for_mobile img {
+    margin: 0;
+    width: 100%;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.taste h3 {
+    color: #191919;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Avenir Next Regular';
+    text-align: left;
+    text-transform: capitalize;
+}
+  section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-8, 
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-8{
+    margin-left: 0px;
+}
+
+section.featured_on .row .col-sm-8 {
+    margin-left: -20px;
+}
+  section.featured_on   .row.right_section_bg .col-sm-4 {
+    margin-left: -10px;
+}
+.featured-logos img:last-child {
+    display: none;
+}
+.robert_k_image img {
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.author_bottom_info {
+    position: absolute;
+    left: 23px;
+    bottom: 30px;
+    color: #fff;
+}
+section.health_experts h4 {
+    display: none;
+}
+.box_2_inner img {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 20px;
+    object-position: 0 -13px;
+}
+.row.box_2 .col-sm-5 {
+    float: left;
+    padding: 0 11px;
+}
+section.health_experts p {
+    font-family: 'Avenir Next Regular';
+    font-size: 14px;
+    text-transform: inherit;
+    color: #242424;
+    font-weight: 400;
+    line-height: 20px;
+}
+section.health_experts .robert_last_text p {
+    font-family: 'Avenir Next Regular';
+    font-size: 14px;
+    text-transform: inherit;
+    color: #1699F8;
+    font-weight: 600;
+    line-height: 20px;
+    position: relative;
+}
+div#shopify-section-waitlist_faq button.owl-next{
+    width: 36px;
+    height: 36px;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004237.png?v=1692287359) no-repeat !important;
+    background-size: 32px !important;
+    font-size: 0 !important;
+    position: absolute;
+    right: -3px;
+    left: auto;
+    top: 10px;
+}
+
+div#shopify-section-waitlist_faq button.owl-prev  {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Group_1000004238.png?v=1692287420) no-repeat !important;
+    font-size: 0 !important;
+    position: absolute;
+    top: 10px;
+    transform: rotate(0deg);
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    left: 0;
+    background-size: 100% !important;
+}
+ul#tabs_slider_mobile .owl-stage-outer {
+    margin: 0 20px;
+}
+.featured-logos img {
+    width: 25%;
+    float: left;
+    padding: 15px 11px;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(4) {
+    display: none;
+}
+.tabs-menu li a {
+    font-size: 14px;
+    padding: 11px 10px;
+    margin: 0 !important;
+    border: 0;
+    line-height: 17px;
+} 
+section.footer_sec.sec-faq .container.nopad {
+    padding: 0;
+}
+div#shopify-section-waitlist_footer section.footer_sec.sec-faq > .container.nopad > .row .col-sm-6.sec_faq_inner1 {
+    margin-bottom: 0 !important;
+    padding-right: 15px !important;
+}
+.no_jitters_sec h3 {
+    font-size: 14px;
+}
+.no_jitters_sec p {
+    font-family: 'Avenir Next Regular';
+    font-size: 12px;
+    line-height: 16px;
+    color: #545454;
+    font-weight: 500;
+}
+#skydive {
+    position: relative;
+    z-index: 999;
+}
+.skydive {
+    position: relative;
+    z-index: 999;
+}
+#skydive:after {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/bg1.png?v=1693234314) no-repeat;
+    content: "" !important;
+    position: absolute;
+    right: -36px;
+    z-index: 0;
+    top: -55px;
+    width: 227px;
+    height: 180px;
+}
+.skydive:after{
+    display:none;
+}
+div#shopify-section-waitlist_no_jitters section.no_jitters .container {
+    padding: 0 30px;
+}
+
+  section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-4, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-4 {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0 !important;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-8, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-8 {
+    width: 70%;
+    padding: 0;
+    max-width: 70%;
+    flex: 0 0 70%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-4, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-4 {
+    width: 30%;
+    max-width: 30%;
+    padding-right: 0 !important;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1), section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) {
+    width: 100%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .taste_pic, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .taste_pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 -5px;
+    position: relative;
+    margin: 0;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) {
+    padding-right: 0;
+    padding-left: 0;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-8, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-8 {
+    margin-left: -8px;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) {
+    padding: 0 15px;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-4, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-4 {
+    width: 30%;
+    max-width: 30%;
+    padding-right: 0 !important;
+    
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) {
+    padding: 0 15px;
+    padding-left: 0;
+}
+.no_jitters_sec h3 {
+    font-size: 13px;
+}
+.tabs-menu .owl-item:hover a {
+    color: #1699F8;
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23498.png?v=1693241253) no-repeat;
+    background-size: auto;
+    background-position: bottom center;
+}
+section.custom_slider_sec .container {
+    padding: 0 !important;
+}
+.coming_soon_btn {
+    float: right !important;
+}
+div#sync1 .item {
+    background: #fff !important;border-radius: 30px !important;
+}
+}
+  
+@media screen and (max-width:385px){
+  .coming_soon_btn a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #336CCD;
+    font-family: 'Avenir Next Regular';
+    line-height: 27.32px;
+    background: #336CCD15;
+    padding: 10px 20px;
+    border-radius: 14px;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1), section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) {
+    width: 100%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-4, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-4 {
+    width: 30%;
+    max-width: 30%;
+}
+section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(1) .col-sm-8, section.featured_on .row.row.right_section_bg .col-sm-6:nth-child(2) .col-sm-8 {
+    width: 70%;
+    padding: 0;
+    max-width: 70%;
+    flex: 0 0 70%;
+}
+div#shopify-section-wailtlist_accordian .sec-faq .set .content {
+    padding-left: 0;
+}
+#sync2 .owl-item {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0px;
+}
+section.sec_home .needsclick.kl-private-reset-css-Xuajs1:nth-child(4) {
+    display: block !important;
+}
+section.featured_on.featured_on_block .needsclick.kl-private-reset-css-Xuajs1:nth-child(3) {
+    display: block !important;
+}
+section#skydive .needsclick.kl-private-reset-css-Xuajs1:nth-child(1) {
+    display: block !important;
+}
+  .coming_soon_btn {
+    margin-top: 29px;
+    float: left;
+}
+.logo {
+    float: right;
+}
+.home_content {
+    text-align: center;
+}
+section.custom_slider_sec {
+    margin-top: 0 !important;
+}
+section.sec_home {
+    background-position: bottom center !important;
+}
+section.featured_on h5 {
+    margin-bottom: 10px;
+}
+section.featured_on.featured_on_block .col-sm-6.empty_col + .col-sm-6 {
+    width: 95%;
+    max-width: 95%;
+    flex: 0 0 95%;
+    float: right;
+    margin-left: 10%;
+}
+.taste_pic img {
+    width: 85px !important;
+    margin-top: -15px;
+}
+.featured-logos img {
+ 
+    padding: 15px 0;
+}
+.featured-logos {
+    padding-bottom: 20px;
+    display: inline-block;
+}
+div#shopify-section-waitlist_no_jitters section.no_jitters {
+    padding-top: 0 !important;
+}
+section.neubrain {
+    padding: 50px 0 !important;
+    margin-top: -100px;
+}
+section.Ingredients {
+    padding: 50px 0 !important;
+}
+.premium {
+    text-align: center;
+}
+section.Ingredients .premium h3 {
+    text-align: left;
+}
+.premium div {
+    text-align: left;
+}
+.sec_faq_inner1:before {
+    bottom: auto;
+    top: 18px;
+    width: 159px;
+    height: 218px;
+    border-radius: 20px;
+    left: 17px;
+    background-size: cover;
+}
+.col-sm-6.sec_faq_inner1 {
+    padding-bottom: 0 !important;
+}
+.box_2_main:before {
+    width: 70%;
+    height: 100%;
+    width: 159px;
+    height: 218px;
+    background-size: cover;
+    border-radius: 20px;
+}
+.featured_content.featured_content_mobile {
+    display: block !important;
+}
+span.span1 {
+    color: #1699F8;
+    font-weight: 700;
+}
+.featured_content {
+    display: none;
+}
+section.featured_on .row .col-sm-8 {
+    margin-left: -15px;
+}
+}
+@media screen and (min-width:600px) and (max-width:1100px){
+    section.sec_home {
+    padding-bottom: 70px !important;
+    background-size: 100%;
+    background-position: bottom;
+}
+section.custom_slider_sec {
+    padding-top: 50px !important;
+}
+main#MainContent {
+    overflow-x: hidden;
+}
+.featured_content {
+    padding-left: 15px;
+}
+.taste_pic {
+    margin: -10px;
+}
+.featured-logos img {
+    padding: 0;
+}
+.featured-logos {
+    padding: 10px;
+}
+section.no_jitters {
+    margin-top: -82px;
+}
+section.health_experts {
+    padding-top: 50px !important;
+}
+.neubrain_heading .neubrain_heading_inner h3+p {
+    display: none;
+}
+.ingredients_pic.ingredients_pic_ipad {
+    display: block !important;
+    float: right;
+    position: relative;
+    height: 206px;
+    width: 206px;
+    left: 0;
+    right: auto;
+    margin: 0;
+    padding: 0;
+    float: right;
+    top: 0;
+}
+.ingredients_pic img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+img.for_mobile_only {
+    display: block !important;
+}
+section.Ingredients .premium h3 {
+    font-family: 'Avenir Next Bold';
+    font-size: 28px;
+    text-transform: inherit !important;
+    color: #454545;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.love_about_coffee_image_inner img {
+    height: 926px;
+    object-fit: cover;
+    object-position: right bottom;
+    border-radius: 30px;
+}
+.love_about_coffee_image_inner {
+    margin-top: 35px;
+    margin-bottom: 13px;
+}
+section.no_jitters .row.row_flex {
+    margin-top: -50px;
+}
+section.Ingredients .tabs-menu li a {
+    padding: 7px 10px;
+}
+section.footer_sec.sec-faq .row {
+    align-items: self-start;
+}
+  section.no_jitters {
+    padding-left: 10px !important;
+}
+section.health_experts {
+    padding-bottom: 0 !important;
+}
+#sync1 .item {
+    margin-top: 0 !important;
+}
+section.neubrain {
+    padding-top: 50px !important;
+    padding-bottom: 0 !important;
+}
+section.Ingredients {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+section.footer_sec.sec-faq {
+    padding-bottom: 20px !important;
+}
+.box_text_bottom {
+    padding: 10px 15px;
+}
+.love_about_coffee_image_inner img {
+    height: 963px;
+}
+.row.right_section_bg {
+    padding-top: 30px;
+}
+.bg_wait_carousel_and_logos {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/bg_main.jpg?v=1693495544) !important;
+    background-position: 0 18px !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.bg_wait_carousel_and_logos section {
+    background: transparent !important;
+}
+div#shopify-section-waitlist_featured_on {
+    background: transparent !important;
+}
+}
+@media screen and (min-width: 900px) and (max-width: 1100px){
+    section.sec_home {
+    padding-bottom: 50px !important;
+}
+section.custom_slider_sec {
+    padding-top: 50px !important;
+}
+.love_about_coffee_image_inner img {
+    height: 820px;
+}
+.center_image img {
+    height: 336px;
+    width: 100%;
+}
+section.no_jitters .col-sm-6 .center_image {
+    margin-left: 0;
+    width: 100%;
+}
+section.no_jitters .col-sm-6 {
+    width: 586px;
+    max-width: 586px;
+}
+}
+.modal-content {
+    border: 0;
+    background: transparent;
+}
+.modal-body {
+    background: transparent;
+}
+@media screen and (min-width:1400px) and (max-width:1500px){
+	section.health_experts .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 535px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+}
+a.btn1 {
+    border-radius: 60px;
+    background: linear-gradient(90deg, #5A69ED 0.44%, #4391E0 24.73%, #45CCEA 101.56%);
+}
+.skydive {
+    background: linear-gradient(90deg, #5A69ED 0.44%, #4391E0 24.73%, #45CCEA 101.56%) !important;
+}
+.sec-faq .set > a.active:before {
+    background: url(https://cdn.shopify.com/s/files/1/0715/9585/2093/files/arrow-circle-down.png?v=1693610120) no-repeat;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+}
+#sync1 .item img {
+    width: 240px;
+    height: auto;
+}
+div#shopify-section-wailtlist_accordian .col-sm-6.sec_faq_inner1 div img {
+    width: 28px;
+    height: auto;
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Waitlist Banner",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image-add",
+            "label": "Upload Logo Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image-add2",
+            "label": "Upload Sec Right Image"
+          },
+          {
+          "type": "text",
+          "id": "button_name",
+          "label": "Add Button Name"
+          },
+          {
+          "type": "url",
+          "id": "button_link",
+          "label": "Add Button Link"
+          },
+          {
+          "type": "richtext",
+          "id": "banner_text1",
+          "label": "Add Banner Large Text"
+          },
+          {
+          "type": "richtext",
+          "id": "banner_text2",
+          "label": "Add Banner Pragraph"
+          },
+          {
+          "type": "text",
+          "id": "klavio_code",
+          "label": "Add Klavio Code"
+          }
+        ],
+    "presets": [{
+    "name": "Waitlist Banner",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

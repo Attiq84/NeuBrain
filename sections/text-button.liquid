@@ -1,0 +1,64 @@
+<div class="bg-no">
+<div class="new-headin">  <h2>{{ section.settings.title }}</h2></div>
+  
+     <div class="rte ne-4">
+            <a href="{{ section.settings.link }}" class="btn jae">
+              {{ section.settings.link_text }}
+            </a>
+          </div>
+  </div>
+{% schema %}
+  {
+    "name": "heading button",
+    "settings": [
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Rich text"
+          },
+      {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Button text",
+            "default": "Button"
+          }
+    ],
+    "presets": [
+      {
+        "name": "heading button",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+
+  .bg-no {
+    padding: 75px 50px;
+    background:linear-gradient(90deg, rgb(75,216,249) 0%, rgb(87,162,221) 35%, rgb(62,157,236) 100%);
+}
+  .new-headin{
+    color:#ffffff;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+        text-transform: capitalize;
+  }
+  .new-headin h2 {
+    text-transform: capitalize;
+  }
+    @media only screen and (max-width:825px){
+  .new-headin {
+    width:100%;
+}
+         .bg-no {
+    padding: 40px 10px;
+}
+}
+</style>

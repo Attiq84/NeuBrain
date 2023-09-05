@@ -1,0 +1,88 @@
+<div class=backgrnd-col>
+<div class="page-width" data-aos="logo__animation">
+<div class="img-new" {{ section.shopify_attributes }}>
+          {%- if section.settings.link != blank -%}
+            <a href="{{ section.settings.link }}" class="logo-bar__link">
+          {%- endif -%}
+          {%- if section.settings.image != blank -%}
+            {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="logo-bar__image lazyload"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720]"
+                data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                data-sizes="auto"
+                alt="{{ section.settings.image.alt }}">
+          {%- else -%}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+          {%- if section.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        </div>
+   <div class="heading-1"> <h2>{{ section.settings.title | escape }}</h2></div>
+      <div class="heading-1"> <h4>{{ section.settings.text-1 | escape }}</h4></div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "Nue Logo",
+    "settings": [
+       {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "heading"
+          },
+          {
+            "id": "text-1",
+            "type": "text",
+            "label": "Text",
+            "default": "Describe a product"
+          }
+    ],
+    "presets": [
+      {
+        "name": "Nue Logo",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  /* nue logo */
+.img-new {
+    width: 25%;
+    margin: auto;
+}
+.heading-1 h1 {
+    font-size: 50px;
+}
+.heading-1{ 
+     color: #000;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+}
+.backgrnd-col {
+    background: #F6F7FC;
+    padding: 31px;
+}
+@media only screen and (max-width: 768px){
+   .img-new {
+    width: 100%;
+}
+.heading-1 h1 {
+    font-size: 24px;
+}
+.heading-1{ 
+  width:100%;
+}
+ }
+</style>

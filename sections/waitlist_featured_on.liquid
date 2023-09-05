@@ -1,0 +1,154 @@
+  <section class="featured_on featured_on_block">
+  <div class="container">
+  
+     
+    <div class="row">
+
+      <div class="col-sm-12">
+        <div class="featured_content">
+        <h2>{{ section.settings.about_coffee }}</h2>
+        <p>{{ section.settings.about_coffee_text }}</p>
+        </div>
+        <div class="featured_content featured_content_mobile" style="display:none">
+        <p><span class="span1">{{ section.settings.about_coffee }}</span> {{ section.settings.about_coffee_text }}</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="row row_flex">
+
+      <div class="col-sm-6 empty_col">
+        
+      </div>
+      <div class="col-sm-6">
+        <div class="right_text_blueline">
+          <p>{{ section.settings.blue_border_text }}</p>
+        </div>
+        
+      </div>
+
+    </div>
+     <div class="row row_flex">
+
+      <div class="col-sm-6 love_about_coffee_image">
+        <div class="love_about_coffee_image_inner"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/love_about_coffee_image.png?v=1692133410"></div>
+      </div>
+          <div class="col-sm-6 right_section">
+        <div class="row right_section_bg">
+
+          {% for block in section.blocks %}
+            {% if block.type == 'block' %}
+          <div class="col-sm-6">
+            <div class="taste">
+            <div class="row row_flex">
+              <div class="col-sm-4">
+               <div class="taste_pic">
+                <img src="{{  block.settings.waitlist-featured-image | img_url: 'master' }}">
+              </div>
+             </div>
+             <div class="col-sm-8">
+               <div class="taste_content">
+                 <h3>{{  block.settings.waitlist-featured-title }}</h3>
+                 <p>{{  block.settings.waitlist-featured-paragraph }}</p>
+               </div>
+             </div>
+            </div>
+          </div>
+          </div>
+           {% endif %}
+{% endfor %} 
+        <div class="featured-logos">
+ {% for block in section.blocks %}
+    {% if block.type == 'featured-logos' %}
+        <img src="{{  block.settings.f_logo | img_url: 'master' }}">
+    {% endif %}
+{% endfor %}  
+        </div>
+        
+        <div class="box_text_bottom">{{ section.settings.featured_on_text }}</div>
+          <div class="hidden only_for_mobile">
+            <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23532.png?v=1692995283">
+          </div>
+          <div><div class="klaviyo-form-WKyQCa"></div></div>
+</div>  
+          </div>
+    </div>
+</div>
+</section>
+{% schema %}
+  {
+    "name": "Waitlist Featured On",
+     "settings": [
+       {
+          "type": "text",
+          "id": "about_coffee",
+          "label": "Add about coffee Heading"
+          },
+       {
+          "type": "text",
+          "id": "about_coffee_text",
+          "label": "Add about coffee Text"
+          },
+       {
+          "type": "richtext",
+          "id": "blue_border_text",
+          "label": "Add Blue Border Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "featured_on_logos",
+            "label": "Upload Featured On Logos"
+          },
+          {
+          "type": "richtext",
+          "id": "featured_on_text",
+          "label": "Add Featured On Text"
+          }  
+        ],
+    "blocks":[
+      {
+        "type": "block",
+        "name": "featured-blocks",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "waitlist-featured-image",
+            "label": "Upload Image"
+          },
+          {
+          "type": "text",
+          "id": "waitlist-featured-title",
+          "label": "Add Title"
+          },
+            {
+            "type": "richtext",
+            "id": "waitlist-featured-paragraph",
+            "label": "Add Paragraph"
+          } 
+          
+        ]
+      },
+      {
+        "type": "featured-logos",
+        "name": "featured-logos",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "f_logo",
+            "label": "Add Logos"
+          } 
+        ]
+      }
+    ],
+    "presets": [{
+    "name": "Waitlist Featured On",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

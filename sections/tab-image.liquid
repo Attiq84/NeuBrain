@@ -1,0 +1,1013 @@
+<div class="back-colr">
+  <div class="tab-link">
+     <h2 class="tile-r">BROWSE INGREDIENTS</h2>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-12')" id="tab-cus-active" >Lion’s Mane</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-13')">Cordyceps</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-14')">Chaga</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-15')" >Reishi</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-16')">Turkey Tail</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-17')">L-Theanine</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-18')">L-Tyrosine</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-19')">Alpha GPC</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-20')">Collagen Peptides</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-21')">Coffee Extract</button>
+</div>
+ 
+  
+<div id="tab-12" class="tabcontent-cus n">
+
+<div class="image-text">
+  <div class="image-wid">
+    <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                </div>
+  </div>
+  
+  <div class="text-wid">
+    <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+   <h2 class="tile-color">{{ section.settings.title | escape }}</h2>
+     <p class="sub-title">{{ section.settings.text }}</p>
+     
+     <h3 id="imageText" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+    
+  </div>
+  </div>
+</div>
+</div>
+
+
+<div id="tab-13" class="tabcontent-cus n">
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title1 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text1 }}</p>
+
+      
+               <h3 id="imageText1" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup1" id="imagePopup1">
+    <div class="popup-content">
+      <span class="popup-close1">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>   
+             </div>
+      </div>
+</div> 
+
+  <div id="tab-14" class="tabcontent-cus n">
+
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap  im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title2 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text2 }}</p>
+
+               <h3 id="imageText2" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup2">
+    <div class="popup-content">
+      <span class="popup-close2">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+             </div>
+  
+      </div>
+   
+</div>
+
+   <div id="tab-15" class="tabcontent-cus n">
+
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title3 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text3 }}</p>
+
+               <h3 id="imageText3" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup3">
+    <div class="popup-content">
+      <span class="popup-close3">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+             </div>
+  
+      </div>
+   
+</div> 
+     <div id="tab-16" class="tabcontent-cus n">
+
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image4 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title4 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text4 }}</p>
+
+               <h3 id="imageText4" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup4">
+    <div class="popup-content">
+      <span class="popup-close4">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+             </div>
+  
+      </div>
+   
+</div> 
+     <div id="tab-17" class="tabcontent-cus n">
+
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image5 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title5 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text5 }}</p>
+
+               <h3 id="imageText5" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup5">
+    <div class="popup-content">
+      <span class="popup-close5">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+             </div>
+  
+      </div>
+     </div>
+
+          <div id="tab-18" class="tabcontent-cus n">
+
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image6 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title6 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text6 }}</p>
+
+               <h3 id="imageText6" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup6">
+    <div class="popup-content">
+      <span class="popup-close6">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+             </div>
+  
+      </div>
+   
+</div> 
+
+          <div id="tab-19" class="tabcontent-cus n">
+
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image7 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title7 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text7 }}</p>
+
+               <h3 id="imageText7" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup7">
+    <div class="popup-content">
+      <span class="popup-close7">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+             </div>
+  
+      </div>
+   
+</div> 
+
+            <div id="tab-20" class="tabcontent-cus n">
+
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image8 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title8 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text8 }}</p>
+
+               <h3 id="imageText8" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup8">
+    <div class="popup-content">
+      <span class="popup-close8">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+             </div>
+  
+      </div>
+   
+</div> 
+
+            <div id="tab-21" class="tabcontent-cus n">
+
+   <div class="image-text">
+      <div class="image-wid">
+                 <div class="image-wrap im-oe" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image9 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                 </div>
+         </div>
+  
+             <div class="text-wid">
+                 <h2>PREMIUM AND NATURAL.</br>BACKED BY SCIENCE.</h2>
+    <p>10 research-backed brain and body-boosting ingredients. Expertly blended and clinically dosed. To unlock your peak performance, all day, every day.</p>
+             <h2 class="tile-color">{{ section.settings.title9 | escape }}</h2>
+             <p class="sub-title">{{ section.settings.text9 }}</p>
+
+               <h3 id="imageText9" class="btn">{{ section.settings.tex1 }}</h3>
+  <div class="popup" id="imagePopup9">
+    <div class="popup-content">
+      <span class="popup-close9">&times;</span>
+      <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Charts___Figures_17.png?v=1688969783" alt="Image" class="ne-pop">
+    </div>
+  </div>
+             </div>
+  
+      </div>
+   
+</div> 
+   
+</div> 
+  
+
+{% schema %}
+{
+    "name": "tab Images",
+   "class": "index-section",
+    "settings": [
+      
+
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+       {
+        "type": "text",
+        "id": "tex1",
+        "label": "button-text"
+      },
+          {
+        "type": "richtext",
+        "id": "text",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title1",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text1",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title2",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text2",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+
+       {
+        "type": "image_picker",
+        "id": "image3",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title3",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text3",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+      
+       {
+        "type": "image_picker",
+        "id": "image4",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title4",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text4",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+      
+      {
+        "type": "image_picker",
+        "id": "image5",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title5",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text5",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "image6",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title6",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text6",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "image7",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title7",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text7",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+       {
+        "type": "image_picker",
+        "id": "image8",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title8",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text8",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+       {
+        "type": "image_picker",
+        "id": "image9",
+        "label": "Image"
+      },
+           {
+        "type": "text",
+        "id": "title9",
+        "label": "Heading"
+      },
+          {
+        "type": "richtext",
+        "id": "text9",
+        "label": "sub Heading",
+         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "tab Images",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .image-text{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text-wid{
+    width:55%;
+    padding: 0px 240px 0px 40px;
+  }
+   .image-wid{
+     width:45%
+   }
+  .back-colr{
+    overflow:hidden;
+  }
+  .tab-link {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    margin-right: 60px;
+    right: 50%;
+    transform: translateY(50%);
+    padding: 25px 60px 25px 25px;
+    background: rgba(255, 255, 255, 0.8);
+
+}
+  
+h2.tile-r {
+    margin: 0px;
+  font-size: 30px;
+}
+  button.tablinks-cus {
+    text-align: left;
+    font-weight:500;
+    font-size:18px;
+}
+  button#tab-cus-active {
+    display: block;
+}
+  .tabcontent-cus .n{
+    padding:0px;
+  }
+  @media only screen and (max-width: 600px){
+.tab-link {
+    width: 100%;
+    position: absolute;
+    margin: 0px;
+    left: 0;
+  transform: translateY(12%);
+  padding:10px
+}
+    button.tablinks-cus {
+    font-size: 17px;
+}
+    h2.tile-r{
+      font-size: 23px;
+    }
+.image-wid {
+    width: 100%;
+/*   height:420px; */
+}
+.text-wid {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+    .image-text {
+    display: block;
+}
+ }
+  button.tablinks-cus.active {
+    color: #11BBEF;
+}
+  @media only screen and (max-width: 825px) and (min-width: 601px) {
+  .tab-link {
+    width: 50%;
+    position: absolute;
+    margin: 0px;
+    left: 0;
+  transform: translateY(12%);
+  padding:10px
+}
+    button.tablinks-cus {
+    font-size: 17px;
+}
+    h2.tile-r{
+      font-size: 23px;
+    }
+.image-wid {
+    width: 100%;
+}
+.text-wid {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+  }
+   @media only screen and (max-width: 1940px) and (min-width: 1561px){
+     button.tablinks-cus {
+    font-size: 24px;
+    text-align: left;
+    font-weight: 500;
+}
+      h2.tile-r {
+    margin: 0px;
+    font-size: 35px;
+       
+}
+    .tab-link {
+    padding: 35px 80px 35px 70px;
+ transform: translateY(40%);
+}
+   }
+  @media only screen and (max-width: 2340px) and (min-width: 1941px){
+.tab-link {
+    margin-right: 80px !important;
+}
+      button.tablinks-cus {
+    font-size: 24px;
+    text-align: left;
+    font-weight: 500;
+}
+    h2.tile-r {
+    margin: 0px;
+    font-size: 35px;
+       
+}
+    .tab-link {
+    padding: 35px 80px 35px 70px;
+
+}
+  }
+   @media only screen and (max-width: 2840px) and (min-width: 2341px){
+.tab-link {
+    margin-right: 122px !important;
+  padding: 35px 80px 35px 70px;
+}
+     h2.tile-r {
+    margin: 0px;
+    font-size: 43px;
+       
+}
+     button.tablinks-cus {
+    font-size: 35px;
+    text-align: left;
+    font-weight: 500;
+}
+     .popup-close,
+     .popup-close1,
+     .popup-close2{
+       font-size:80px;
+     }
+   }
+  h2.tile-color {
+    color: #10BBEF;
+}
+   .popup,
+  .popup1,
+ .popup2,
+  .popup3,
+  .popup4,
+  .popup5,
+  .popup6,
+  .popup7,
+  .popup8,
+  .popup9{
+     overflow:auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s;
+    }
+
+    .popup.show,
+  .popup1.show,
+   .popup2.show,
+  .popup3.show,
+  .popup4.show,
+  .popup5.show,
+  .popup6.show,
+  .popup7.show,
+  .popup8.show,
+  .popup9.show{
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup-content {
+      width:50%;
+      margin:auto;
+      position: relative;
+      border-radius: 5px;
+      
+    }
+
+    .popup-close,
+  .popup-close1,
+  .popup-close2,
+  .popup-close3,
+    .popup-close4,
+  .popup-close5,
+  .popup-close6,
+  .popup-close7,
+  .popup-close8,
+  .popup-close9{
+      position: absolute;
+      top: 5px;
+      margin-left:20px;
+      cursor: pointer;
+      font-size: 60px;
+      color:#139ED9;
+    }
+  img.ne-pop {
+    border-radius: 30px;
+}
+    @media only screen and (max-width: 825px) and (min-width: 601px) {
+      .popup-content{
+        width:95%;
+        margin-top: 18%;
+      }
+     .popup-close,
+     .popup-close1,
+     .popup-close2,
+     .popup-close3,
+     .popup-close4,
+     .popup-close5,
+     .popup-close6,
+     .popup-close7,
+     .popup-close8,
+     .popup-close9{
+     top:25px;
+      font-size: 40px;
+   }
+   }
+  @media only screen and (max-width: 600px){
+.popup-close, .popup-close1, .popup-close2, .popup-close3, .popup-close4, .popup-close5, .popup-close6, .popup-close7, .popup-close8, .popup-close9{
+  top:15px;
+      font-size: 30px;
+   }
+    .popup-content {
+      width:100%;
+      margin-top: 50%;
+    }
+}
+   @media only screen and (max-width: 2840px) and (min-width: 2341px){
+    .popup-content {
+      width:37%;
+      margin:auto;
+    }
+   }
+</style>
+   <script>
+    // Get the text, popup element, and close button
+    const text = document.getElementById('imageText');
+    const popup = document.getElementById('imagePopup');
+    const closeButton = popup.querySelector('.popup-close');
+
+    // Show the popup when the text is clicked
+    text.addEventListener('click', () => {
+      popup.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup.addEventListener('click', (event) => {
+      if (event.target === popup || event.target === closeButton) {
+        popup.classList.remove('show');
+      }
+    });
+  </script>
+  
+<script>
+function openTab(evt, cityName) {
+
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent-cus");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks-cus");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("tab-cu-actives").click();
+</script>
+<!--2nd  -->
+<script>
+    // Get the text, popup element, and close button
+    const text1 = document.getElementById('imageText1');
+    const popup1 = document.getElementById('imagePopup1');
+    const closeButton1 = popup1.querySelector('.popup-close1');
+
+    // Show the popup when the text is clicked
+    text1.addEventListener('click', () => {
+      popup1.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup1.addEventListener('click', (event) => {
+      if (event.target === popup1 || event.target === closeButton1) {
+        popup1.classList.remove('show');
+      }
+    });
+  </script>
+<!--3rd  -->
+<script>
+    // Get the text, popup element, and close button
+    const text3 = document.getElementById('imageText3');
+    const popup3 = document.getElementById('imagePopup3');
+    const closeButton3 = popup3.querySelector('.popup-close3');
+
+    // Show the popup when the text is clicked
+    text3.addEventListener('click', () => {
+      popup3.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup3.addEventListener('click', (event) => {
+      if (event.target === popup3 || event.target === closeButton3) {
+        popup3.classList.remove('show');
+      }
+    });
+  </script>
+  <!--4th  -->
+<script>
+    // Get the text, popup element, and close button
+    const text4 = document.getElementById('imageText4');
+    const popup4 = document.getElementById('imagePopup4');
+    const closeButton4 = popup4.querySelector('.popup-close4');
+
+    // Show the popup when the text is clicked
+    text4.addEventListener('click', () => {
+      popup4.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup4.addEventListener('click', (event) => {
+      if (event.target === popup4 || event.target === closeButton4) {
+        popup4.classList.remove('show');
+      }
+    });
+  </script>
+  <!--5th  -->
+<script>
+    // Get the text, popup element, and close button
+    const text5 = document.getElementById('imageText5');
+    const popup5 = document.getElementById('imagePopup5');
+    const closeButton5 = popup5.querySelector('.popup-close5');
+
+    // Show the popup when the text is clicked
+    text5.addEventListener('click', () => {
+      popup5.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup5.addEventListener('click', (event) => {
+      if (event.target === popup5 || event.target === closeButton5) {
+        popup5.classList.remove('show');
+      }
+    });
+  </script>
+  <!--6th  -->
+<script>
+    // Get the text, popup element, and close button
+    const text6 = document.getElementById('imageText6');
+    const popup6 = document.getElementById('imagePopup6');
+    const closeButton6 = popup6.querySelector('.popup-close6');
+
+    // Show the popup when the text is clicked
+    text6.addEventListener('click', () => {
+      popup6.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup6.addEventListener('click', (event) => {
+      if (event.target === popup6 || event.target === closeButton6) {
+        popup6.classList.remove('show');
+      }
+    });
+  </script>
+  <!--7th  -->
+<script>
+    // Get the text, popup element, and close button
+    const text7 = document.getElementById('imageText7');
+    const popup7 = document.getElementById('imagePopup7');
+    const closeButton7 = popup7.querySelector('.popup-close7');
+
+    // Show the popup when the text is clicked
+    text7.addEventListener('click', () => {
+      popup7.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup7.addEventListener('click', (event) => {
+      if (event.target === popup7 || event.target === closeButton7) {
+        popup7.classList.remove('show');
+      }
+    });
+  </script>
+   <!--8th  -->
+<script>
+    // Get the text, popup element, and close button
+    const text8 = document.getElementById('imageText8');
+    const popup8 = document.getElementById('imagePopup8');
+    const closeButton8 = popup8.querySelector('.popup-close8');
+
+    // Show the popup when the text is clicked
+    text8.addEventListener('click', () => {
+      popup8.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup8.addEventListener('click', (event) => {
+      if (event.target === popup8 || event.target === closeButton8) {
+        popup8.classList.remove('show');
+      }
+    });
+  </script>
+   <!--9th  -->
+<script>
+    // Get the text, popup element, and close button
+    const text9 = document.getElementById('imageText9');
+    const popup9 = document.getElementById('imagePopup9');
+    const closeButton9 = popup9.querySelector('.popup-close9');
+
+    // Show the popup when the text is clicked
+    text9.addEventListener('click', () => {
+      popup9.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup9.addEventListener('click', (event) => {
+      if (event.target === popup9 || event.target === closeButton9) {
+        popup9.classList.remove('show');
+      }
+    });
+  </script>
+  <!--10th  -->
+<script>
+    // Get the text, popup element, and close button
+    const text2 = document.getElementById('imageText2');
+    const popup2 = document.getElementById('imagePopup2');
+    const closeButton2 = popup2.querySelector('.popup-close2');
+
+    // Show the popup when the text is clicked
+    text2.addEventListener('click', () => {
+      popup2.classList.add('show');
+    });
+
+    // Hide the popup when clicked outside the content area or on the close button
+    popup2.addEventListener('click', (event) => {
+      if (event.target === popup2 || event.target === closeButton2) {
+        popup2.classList.remove('show');
+      }
+    });
+  </script>

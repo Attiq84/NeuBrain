@@ -1,0 +1,165 @@
+<section class="sec-faq">
+    <div class="container">
+    
+        <div class="row">
+ 
+
+            <div class="col-sm-6 sec_faq_inner1">
+              <div class="sec_faq_inner">
+              <div class="sec_faq_inner_inner">
+              {% for block in section.blocks %}
+             <div class="set" id="set_{{  block.settings.acocrdion-number }}">
+              <a href="javascript:void(0)">
+               <div><img src="{{  block.settings.icon-add | img_url: 'master' }}"></div> {{  block.settings.title }}
+              </a>
+              <div class="content">
+                {{  block.settings.paragraph }}
+              </div>
+            </div>
+               {% endfor %}
+            </div>
+               </div>
+              </div>
+         <div class="col-sm-6 box_2_main">
+            <div class="row box_2">
+              <div class="box_2_inner">
+              <div class="col-sm-5">
+                <img src="{{  section.settings.quiz-image | img_url: 'master' }}">
+              </div>
+              <div class="col-sm-7">
+                <h3>{{ section.settings.quiz_heading }}</h3>
+                <p>{{ section.settings.quiz_text }}</p>
+                <a href="{{ section.settings.quiz_link }}" class="btn1">{{ section.settings.quiz_button_text }}</a>
+              </div>
+            </div>
+              </div>
+
+         </div>
+        </div>
+    </div>
+</section>
+<section id="skydive">
+
+<div class="skydive">
+  <div class="container text-center">
+ 
+      <h3>{{ section.settings.skydive_heading }}</h3>
+      <p>{{ section.settings.skydive_text }}</p>
+     <div class="klaviyo-form-R8wb3Z"></div>
+
+    </div>
+ 
+  </div>
+</section>
+<script>
+  $(document).ready(function(){
+    $("div#set_1 a").addClass("active");
+  $('.set > a').on("click", function(){
+    $('.set').removeClass('active_tab');
+    if($(this).hasClass('active')){
+      $(this).removeClass("active");
+      $(this).parent().removeClass('active_tab');
+      $(this).siblings('.content').slideUp(200);
+      $(".set > a i").removeClass("fa-minus").addClass("fa-plus");
+    }else{
+      $(".set > a i").removeClass("fa-minus").addClass("fa-plus");
+    $(this).find("i").removeClass("fa-plus").addClass("fa-minus");
+    $(".set > a").removeClass("active");
+    $(this).addClass("active");
+    $(this).parent().addClass('active_tab');
+       
+    $('.content').slideUp(200);
+    $(this).siblings('.content').slideDown(200);
+    } 
+    
+  });
+ 
+});
+$('.set .content:first').show();
+$('.set .content:first').addClass('open');
+
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "Waitlist Accordian",
+         "settings": [
+          {
+            "type": "image_picker",
+            "id": "quiz-image",
+            "label": "Upload Quiz Image"
+          },
+          {
+          "type": "text",
+          "id": "quiz_heading",
+          "label": "Add Quiz Heading"
+          },
+          {
+          "type": "richtext",
+          "id": "quiz_text",
+          "label": "Add Quiz Text"
+          },
+          {
+          "type": "text",
+          "id": "quiz_button_text",
+          "label": "Add Quiz Button Text"
+          },
+          {
+          "type": "url",
+          "id": "quiz_link",
+          "label": "Add Quiz URL"
+          },
+           {
+          "type": "text",
+          "id": "skydive_heading",
+          "label": "Add Skydive Heading"
+          },
+           {
+          "type": "richtext",
+          "id": "skydive_text",
+          "label": "Add Skydive Text"
+          }
+        ],
+    "blocks":[
+      {
+        "type": "block",
+        "name": "waitlist-accordian",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon-add",
+            "label": "Upload Icon"
+          },
+          {
+          "type": "text",
+          "id": "title",
+          "label": "Add Title"
+          },
+            {
+            "type": "richtext",
+            "id": "paragraph",
+            "label": "Add Paragraph"
+          },
+          {
+            "type": "text",
+            "id": "acocrdion-number",
+            "label": "Add Accordian Number"
+          }
+          
+        ]
+      }
+    ],
+    "presets": [{
+    "name": "Waitlist Accordian",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

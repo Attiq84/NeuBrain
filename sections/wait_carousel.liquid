@@ -1,0 +1,79 @@
+<section class="custom_slider_sec">
+  <div class="container">
+    <div  class="owl-carousel owl-theme custom_slider" id="owl-demo-3">
+ 
+
+ {% for block in section.blocks %}
+        <div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505"> {{  block.settings.title }}</div>
+ {% endfor %}
+ 
+    </div>
+
+<div class="hidden only_for_mobile only_mobile">
+  
+     <marquee width="100%" direction="left" height="60px">
+       
+  
+
+        <div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Brain Power</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Enhanced Energy</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Reduced Stress</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Immunity</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Gut Health</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Brain Power</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Enhanced Energy</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Reduced Stress</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Immunity</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Gut Health</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Brain Power</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Enhanced Energy</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Reduced Stress</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Immunity</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Gut Health</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Brain Power</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Enhanced Energy</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Reduced Stress</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Immunity</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Gut Health</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Brain Power</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Enhanced Energy</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Reduced Stress</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Immunity</div>
+<div class="slide_text item"><img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/tick-circle.png?v=1692035505">  Gut Health</div>
+        
+ 
+</marquee>
+</div>
+
+ 
+
+     
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Waitlist Carousel",
+    "blocks":[
+      {
+        "type": "block",
+        "name": "waitlist-carousel",
+        "settings": [
+          {
+          "type": "text",
+          "id": "title",
+          "label": "Add Title"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+    "name": "Waitlist Carousel",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

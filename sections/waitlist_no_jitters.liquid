@@ -1,0 +1,118 @@
+<section class="no_jitters">
+  <div class="container">
+    <div class="row row_flex">
+      <div class="col-sm-3">
+        <div class="no_jitters_sec">
+          <img src="{{  section.settings.icon1 | img_url: 'master' }}">
+          <h3>{{ section.settings.title1 }}</h3>
+          <p>{{ section.settings.text1 }}</p>
+        </div>
+        <div class="no_jitters_sec">
+          <img src="{{  section.settings.icon2 | img_url: 'master' }}">
+        <h3>{{ section.settings.title2 }}</h3>
+          <p>{{ section.settings.text2 }}</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="center_image">
+          <img src="{{  section.settings.center_image | img_url: 'master' }}">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="no_jitters_sec">
+          <img src="{{  section.settings.icon3 | img_url: 'master' }}">
+           <h3>{{ section.settings.title3 }}</h3>
+          <p>{{ section.settings.text3 }}</p>
+        </div>
+        <div class="no_jitters_sec">
+          <img src="{{  section.settings.icon4 | img_url: 'master' }}">
+           <h3>{{ section.settings.title4 }}</h3>
+          <p>{{ section.settings.text4 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Waitlist No Jitters",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "center_image",
+            "label": "Upload Center Image"
+          },
+          {
+          "type": "image_picker",
+          "id": "icon1",
+          "label": "Add Icon1"
+          },
+          {
+          "type": "text",
+          "id": "title1",
+          "label": "Add Title1"
+          },
+          {
+          "type": "text",
+          "id": "text1",
+          "label": "Add Text1"
+          },
+          {
+          "type": "image_picker",
+          "id": "icon2",
+          "label": "Add Icon2"
+          },
+          {
+          "type": "text",
+          "id": "title2",
+          "label": "Add Title2"
+          },
+          {
+          "type": "text",
+          "id": "text2",
+          "label": "Add Text2"
+          },
+          {
+          "type": "image_picker",
+          "id": "icon3",
+          "label": "Add Icon3"
+          },
+          {
+          "type": "text",
+          "id": "title3",
+          "label": "Add Title3"
+          },
+          {
+          "type": "text",
+          "id": "text3",
+          "label": "Add Text3"
+          },
+          {
+          "type": "image_picker",
+          "id": "icon4",
+          "label": "Add Icon4"
+          },
+          {
+          "type": "text",
+          "id": "title4",
+          "label": "Add Title4"
+          },
+          {
+          "type": "text",
+          "id": "text4",
+          "label": "Add Text4"
+          }
+
+        ],
+    "presets": [{
+    "name": "Waitlist No Jitters",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

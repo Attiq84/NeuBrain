@@ -1,0 +1,212 @@
+{%- style -%}
+.logo-bar--{{ section.id }} {
+  opacity: {{ section.settings.logo_opacity | divided_by: 100.0 }};
+}
+{%- endstyle -%}
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="page-width" data-aos="logo__animation">
+  {%- if section.settings.title != blank -%}
+    <div class="section-header">
+      <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="logo-bar logo-bar--{{ section.id }}">
+      {%- for block in section.blocks -%}
+        <div class="logo-bar__item newve" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="logo-bar__link">
+          {%- endif -%}
+          {%- if block.settings.image != blank -%}
+            {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="logo-bar__image lazyload nprm"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720]"
+                data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                data-sizes="auto"
+                alt="{{ block.settings.image.alt }}">
+          {%- else -%}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        <span class="head-1"> <h3>{{ block.settings.title | escape }}</h3></span>
+      <span class="para-1"> <p>{{ block.settings.text-1 | escape }}</p></span>
+        </div>
+    
+      
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+  {
+    "name": "product logo text",
+    "class": "index-section",
+    "max_blocks": 10,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "range",
+        "id": "logo_opacity",
+        "label": "Logo opacity",
+        "default": 76,
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "%"
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "heading"
+          },
+          {
+            "id": "text-1",
+            "type": "text",
+            "label": "Text",
+            "default": "Describe a product"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link",
+            "info": "Optional"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product logo text",
+        "blocks": [
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+<style>
+   .logo-bar__item.newve{
+    flex: 0 1 200px;
+    vertical-align: middle;
+    margin: 0 21px 2px;
+}
+  @media only screen and (max-width: 600px){
+   .logo-bar__item.newve {
+    flex: 0 1 115px;
+    vertical-align: middle;
+    margin: 0 20px 20px;
+}
+  }
+  img.logo-bar__image.nprm.lazyautosizes.lazyloaded {
+    width: 50%;
+}
+  div#shopify-section-template--18858998726973__6623417f-c850-4721-b191-f4f150a001fe {
+    background: #f8f8f8;
+}
+  div#shopify-section-template--18918419464509__b4b008ef-a7dc-4e2a-8cf5-dfec739b25e7{
+    padding-top: 0px;
+  padding-bottom: 30px;
+    background: #ECFAFE;
+}
+div#shopify-section-template--18918419464509__bd0d3698-356c-4352-a285-1583b8697c4b {
+
+    padding-bottom:0px;
+}
+  div#shopify-section-template--18917148262717__b1c98382-97c0-4d29-ab88-84820218b907{
+    padding-top: 0px;
+  padding-bottom: 30px;
+    background: #ECFAFE;
+  }
+  div#shopify-section-template--18917148262717__66d4b3e7-4ada-43cb-b697-dff2008385d8 {
+    padding-bottom: 20px;
+}
+  div#shopify-section-template--18918419464509__b4b008ef-a7dc-4e2a-8cf5-dfec739b25e7 .logo-bar__item.newve{
+    flex: 0 1 170px;
+    vertical-align: middle;
+    margin: 0 30px 20px;
+}
+div#shopify-section-template--19928598184253__b4b008ef-a7dc-4e2a-8cf5-dfec739b25e7 {
+    padding: 0px;
+}
+
+  @media only screen and (max-width: 600px){
+div#shopify-section-template--18917148262717__b1c98382-97c0-4d29-ab88-84820218b907 .logo-bar__item.newve {
+    flex: 0 1 105px;
+  vertical-align: middle;
+    margin: 0 1px 7px;
+}
+  }
+ @media only screen and (max-width: 825px) and (min-width: 601px) {
+div#shopify-section-template--19928598184253__b4b008ef-a7dc-4e2a-8cf5-dfec739b25e7 .logo-bar__item.newve {
+    flex: 0 1 170px;
+  vertical-align: middle;
+    margin: 0 2px 7px;
+}
+   
+  }
+   @media only screen and (max-width: 825px) and (min-width: 601px) {
+  div#shopify-section-template--19928597266749__b1c98382-97c0-4d29-ab88-84820218b907 .logo-bar__item.newve {
+    flex: 0 1 170px;
+  vertical-align: middle;
+    margin: 0 2px 7px;
+}  
+  }
+
+  
+  @media only screen and (max-width: 825px) and (min-width: 601px) {
+  div#shopify-section-template--19928597365053__6623417f-c850-4721-b191-f4f150a001fe .logo-bar__item.newve {
+    flex: 0 1 170px;
+  vertical-align: middle;
+    margin: 0 2px 7px;
+}  
+  }
+  @media only screen and (max-width: 600px) {
+  div#shopify-section-template--19928597266749__b1c98382-97c0-4d29-ab88-84820218b907 .logo-bar__item.newve {
+    flex: 0 1 110px;
+  vertical-align: middle;
+    margin: 0 2px 7px;
+}  
+  }
+</style>

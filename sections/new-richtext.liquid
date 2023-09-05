@@ -1,0 +1,81 @@
+<div class="page-width">
+<div class="new-headin-1">  
+  <h2>{{ section.settings.title }}</h2>
+</div>
+<div class="new-tr">
+            {%- if section.settings.text != blank -%}
+              {%- if section.settings.enlarge_text %}<div class="enlarge-text lag-ce">{% endif -%}
+              {{ section.settings.text }}
+              {%- if section.settings.enlarge_text %}</div>{% endif -%}
+            {%- else -%}
+              {{ 'home_page.onboarding.no_content' | t }}
+            {%- endif -%}
+          </div>
+  <div class="new-headin-1 promis">  
+  <h2>{{ section.settings.title-1 | escape }}</h2>
+</div>
+
+</div> 
+{% schema %}
+  {
+    "name": "promise text",
+    "class": "index-section",
+    "settings": [
+      {
+            "type": "html",
+            "id": "title",
+            "label": "Heading",
+            "default": "Rich text"
+          },
+      {
+            "type": "checkbox",
+            "id": "enlarge_text",
+            "label": "Enlarge text",
+            "default": true
+          },
+          {
+            "id": "text",
+            "type": "richtext",
+            "label": "Text",
+            "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+      {
+            "type": "text",
+            "id": "title-1",
+            "label": "subtitle",
+            "default": "Rich text"
+          }
+    ],
+    "presets": [
+      {
+        "name": "promise text",
+        "category": "text"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .new-tr {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+  .new-headin-1 {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    color: #000;
+}
+  
+   @media only screen and (max-width: 767px){
+   .new-tr {
+     width:100%;
+     text-align:left;
+   }
+    .new-headin-1{
+  width:100%;
+} 
+  }
+</style>
+

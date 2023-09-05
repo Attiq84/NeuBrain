@@ -1,0 +1,175 @@
+<section class="Ingredients">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="Ingredients_heading" style="text-align:center;">
+          <h3>{{ section.settings.browse-ingredients }}</h3>
+        </div>
+      </div>
+    </div>
+
+<div id="tabs-container">
+  <div class="row">
+    <div class="col-sm-3">
+      <ul class="tabs-menu">
+    {% for block in section.blocks %}
+        <li id="tab_{{ block.settings.waitlist-tab-id }}"><a href="#tab-{{ block.settings.waitlist-tab-id }}">{{ block.settings.waitlist-tab-name }}</a></li>
+ {% endfor %}
+    </ul>
+   
+      <ul class="tabs-menu tabs_slider_mobile owl-carousel owl-theme custom_slider" id="tabs_slider_mobile" style="display:none;">
+    {% for block in section.blocks %}
+        <li class="item" id="tab_mobile_{{ block.settings.waitlist-tab-id }}"><a href="#tab-{{ block.settings.waitlist-tab-id }}">{{ block.settings.waitlist-tab-name }}</a></li>
+ {% endfor %}
+    </ul> 
+    </div>
+    <div class="col-sm-9">
+
+
+
+
+  <div class="tab">
+    {% for block in section.blocks %}
+        <div id="tab-{{ block.settings.waitlist-tab-id }}" class="tab-content">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="premium">
+                  <div class="ingredients_pic ingredients_pic_ipad" style="display:none;">
+                  <img src="{{  block.settings.waitlist-faq-image | img_url: 'master' }}">
+                    <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/Rectangle_23520.png?v=1693239694" class="for_mobile_only" style="display:none">
+                </div>
+                  <h3>{{ block.settings.waitlist-faq-heading }}</h3>
+                  
+                  <div>{{ block.settings.waitlist-faq-text }}</div>
+                  <a href=""  data-toggle="modal" data-target="#myModal" class="btn1">{{ block.settings.waitlist-button-title }}</a>
+                </div>
+              </div>
+              <div class="col-sm-6 nopad">
+                <div class="ingredients_pic">
+                  <img src="{{  block.settings.waitlist-faq-image | img_url: 'master' }}">
+                </div>
+              </div>
+            </div>
+        </div>
+{% endfor %}
+      
+    </div>
+
+
+
+      
+    </div>
+  </div>
+
+  
+</div>
+
+  </div>
+</section>
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+      <div class="modal-body">
+          <img src="https://cdn.shopify.com/s/files/1/0715/9585/2093/files/supplements_facts.png?v=1693604379">
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+<script>
+  $(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+ 
+    $("li#tab_1").addClass("current");
+});
+
+</script>
+{% schema %}
+  {
+    "name": "Waitlist Faq Tabs",
+     "settings": [
+          {
+          "type": "text",
+          "id": "browse-ingredients",
+          "label": "Add Browse Ingredients Heading"
+          } 
+        ],
+    "blocks":[
+      {
+        "type": "block",
+        "name": "featured-blocks",
+        "settings": [
+          {
+          "type": "text",
+          "id": "waitlist-tab-name",
+          "label": "Add Tab Name"
+          },
+          {
+          "type": "text",
+          "id": "waitlist-faq-heading",
+          "label": "Add Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "waitlist-faq-image",
+            "label": "Upload Image"
+          },
+          {
+          "type": "text",
+          "id": "waitlist-faq-title",
+          "label": "Add Title"
+          },
+            {
+            "type": "richtext",
+            "id": "waitlist-faq-text",
+            "label": "Add Paragraph"
+            },
+          {
+          "type": "text",
+          "id": "waitlist-button-title",
+          "label": "Add Title"
+          },
+          {
+          "type": "url",
+          "id": "waitlist-button-link",
+          "label": "Add Title"
+          },
+          {
+          "type": "text",
+          "id": "waitlist-tab-id",
+          "label": "Add Tab Number"
+          }
+          
+          
+        ]
+      }
+    ],
+    "presets": [{
+    "name": "Waitlist Faq Tabs",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

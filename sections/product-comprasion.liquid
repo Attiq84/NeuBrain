@@ -1,0 +1,67 @@
+
+<div class="new-page-width">
+  <div class="head-title">  
+  <h2>{{ section.settings.title }}</h2>
+</div>
+    <p class="stragey">{{ section.settings.title1 }}</p>
+<div class="new-col-img  lo-nw">
+                  <div class="image-wrap b-we" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                </div>
+                </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Product Comprasion",
+    "settings": [
+      {
+            "type": "html",
+            "id": "title",
+            "label": "Heading",
+            "default": "Rich text"
+          },
+      {
+            "type": "text",
+            "id": "title1",
+            "label": "text",
+            "default": "Rich text"
+          },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Comprasion",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  .image-wrap.b-we {
+    border-radius: 0px !important;
+}
+    @media only screen and (max-width: 2840px) and (min-width: 2341px){
+  .lo-nw {
+    width:60%;
+    margin:auto;
+}
+  }
+   @media only screen and (max-width: 2340px) and (min-width: 1941px) {
+    .lo-nw {
+    width:70%;
+    margin:auto;
+}
+  }
+</style>

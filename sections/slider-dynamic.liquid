@@ -1,0 +1,269 @@
+<div class="ph-bg">
+    <div class="page-width">
+       {%- if section.settings.title != blank -%}
+    <div class="section-header">
+      <h2 class="section-header__title">{{ section.settings.title }}</h2>
+    </div>
+  {%- endif -%}
+     
+      <div class="arro">&#8594;</div>
+      <div class="slider-container">  
+        <div class="left-column">
+          <p class="slider-heading">Andres Preschel</p>
+          <p class="slider-description">"Drinking NEUBRAIN has been my go-to for staying focused, energized, and motivated all day long. I have a cup every morning ... it's become a part of my ritual. Even if you're not typically a coffee drinker, the health benefits are too good to pass up."</p>
+          <p class="slider-postion">Exercise Physiologist, Host of the Know Your Physio podcast</p>
+        </div>
+
+
+        
+
+        
+        <div class="slider">
+          {% for block in section.blocks %}
+            
+          <div class="slide">
+             {%- if block.settings.text-name!= blank -%}
+            <div class="placeholder-heading"><h3>{{ block.settings.text-name }}</h3></div>
+              {%- endif -%}
+              
+              {%- if block.settings.content-pa != blank -%}
+            <div class="placeholder-paragraph"><p>{{ block.settings.content-pa }}</p></div>
+              {%- endif -%}
+
+            {%- if block.settings.content-pos != blank -%}
+            <div class="placeholder-paragraph1"><p>{{ block.settings.content-pos }}</p></div>
+              {%- endif -%}
+            
+              
+              <div class="image-wrap new-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.image.alt }}">
+                </div>
+           
+          </div>
+          {% endfor %}
+        </div>
+
+
+
+
+
+
+        
+      </div>
+    </div>
+  </div>
+{% schema %}
+  {
+    "name": "slider dynamic",
+     "class": "index-section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+         "max_blocks": 5,
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+      "type": "text",
+      "id": "text-name",
+      "label": "Name"
+    },
+
+     {
+      "type": "richtext",
+      "id": "content-pa",
+      "label": "Content"
+    },
+              {
+      "type": "text",
+      "id": "content-pos",
+      "label": "Position"
+    },
+  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    
+       ]
+     }
+  ],
+    "presets": [
+      {
+        "name": "slider dynamic",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+   /* Slider Container */
+     .slider-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+       background:#fff;
+    }
+    
+    /* Slider */
+    .slider {
+      background:#fff;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    /* Slide */
+    .slide {
+      flex: 0 0 40%;
+      padding: 0px 5px;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: #ecfafe;
+      border-radius: 5px;
+    }
+	.ph-bg {
+    background: #ECFAFE;
+    padding: 40px 0px;
+}
+	.slide:first-child {
+   clip-path:polygon(0% 0, 100% 0%, 100% 250%, 0 -3%);
+}
+    
+    /* Heading */
+    .slider-heading {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    
+    /* Left Column */
+    .left-column {
+      flex: 0 0 25%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-radius: 5px;
+      z-index: 2;
+    }
+      
+    /* Left Arrow */
+    .arro {
+      float: right;
+      transform: translateY(-200%);
+      cursor: pointer;
+      color: #000;
+      font-size: 30px;
+    }
+    
+    /* Placeholder Image */
+    .placeholder-image {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  
+    
+    /* Hide overflow */
+    .image-column img {
+      overflow: hidden;
+    }
+  .placeholder-paragraph1 {
+    display: none;
+}
+    
+   .se-header {
+    text-align: center;
+}
+.placeholder-heading {
+    display: none;
+}
+    .placeholder-paragraph {
+    display: none;
+}
+  p.slider-description {
+    margin-top: 20%;
+}
+  p.slider-postion {
+    margin-top: 20%;
+}
+/*   mobile */
+  @media only screen and (max-width: 600px){
+  .slider-container{
+    display:block;
+   margin: 0px 0px 0px 30px;
+  }
+    .slide{ flex: 0 0 100%;}
+     p.slider-description {
+    margin-top: 1px;
+}
+  p.slider-postion {
+    margin-top: 1px;
+}
+   
+  }
+  
+@media only screen and (max-width: 825px) and (min-width: 601px)  {
+  .slide {
+    flex: 0 0 81%;}
+  .left-column{
+    flex: 0 0 40%;
+    padding:5px;
+  }
+  h2.section-header__title {
+    font-size: 22px;
+}
+  .arro{
+    transform: translateY(-160%);
+  }
+}
+  .new-wrap{
+    border-radius:0px;
+  }
+  </style>
+  <script>
+    // Slide the slider to the left
+    function slideLeft() {
+      const slider = document.querySelector('.slider');
+      slider.appendChild(slider.firstElementChild);
+      
+      const currentSlide = document.querySelector('.slide');
+      const currentHeading = currentSlide.querySelector('.placeholder-heading').textContent;
+      const currentDescription = currentSlide.querySelector('.placeholder-paragraph').textContent;
+      const currentpostion = currentSlide.querySelector('.placeholder-paragraph1').textContent;
+    
+      const leftColumn = document.querySelector('.left-column');
+      leftColumn.querySelector('.slider-heading').textContent = currentHeading;
+      leftColumn.querySelector('.slider-description').textContent = currentDescription;
+       leftColumn.querySelector('.slider-postion').textContent = currentpostion;
+      
+      const imageColumns = document.querySelectorAll('.image-column');
+      const nextImageIndex = (Array.from(imageColumns).findIndex((col) => col.querySelector('img').src === currentSlide.querySelector('img').src) + 1) % imageColumns.length;
+      const nextImage = imageColumns[nextImageIndex].querySelector('img');
+      imageColumns.forEach((col) => col.style.display = 'none');
+      imageColumns[nextImageIndex].style.display = 'block';
+      
+      const nearestImage = document.querySelector('.nearest-image');
+      nearestImage.classList.add('nearest-image');
+      nextImage.classList.add('nearest-image');
+    }
+    
+    // Add event listener to the left arrow
+    const leftArrow = document.querySelector('.arro');
+    leftArrow.addEventListener('click', slideLeft);
+  </script>

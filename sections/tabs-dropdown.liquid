@@ -1,0 +1,555 @@
+ <div class="tabs-accrd">
+ <div class="page-width">
+<div class="col-12 accord">
+
+     {% for block in section.blocks %}
+<button class="tab-new"> <h4>{{block.settings.question}}</h4></button>
+  
+<div class="panel" style="color:black;">
+    <div
+  data-block-id="{{ block.id }}"
+  data-block-type="background-image"
+  class="background-media-text new-backimg background-media-text--{{ block.id }} background-media-text--{{ block.settings.height }} loaded"
+     
+  data-aos="background-media-text__animation"
+ {% if block.settings.parallax %}data-parallax="true"{% endif %}>
+
+  <div class="background-media-text__container">
+    {%- if block.settings.parallax -%}
+      <div class="parallax-container">
+        <div class="parallax-image">
+    {%- endif -%}
+
+      {%- if block.settings.image != blank -%}
+        {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img
+          class="image-fit background-media-text__image background-media-text__image--{{ block.id }} lazyload"
+          src=""
+          data-src="{{ img_url }}"
+          data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+          data-widths="[720, 900, 1080, 1800, 2400]"
+          data-sizes="auto"
+          alt="{{ block.settings.image.alt | escape }}"
+          style="object-position: {{ block.settings.focal_point }}">
+        <noscript>
+          <img
+            class="image-fit background-media-text__image background-media-text__image--{{ block.id }} lazyloaded"
+            src="{{ block.settings.image | img_url: '1800x' }}"
+            alt="{{ block.settings.image.alt }}">
+        </noscript>
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+
+    {%- if block.settings.parallax -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+  {%- if block.settings.subtitle != blank or block.settings.title != blank or block.settings.text != blank -%}
+    <div class="background-media-text__inner">
+      <div class="back-ma">
+        <div class="animation-cropper">
+          <div class="animation-contents">
+            <div class="background-media-text__text new-wid{% if block.settings.framed %} background-media-text__text--framed{% endif %}">
+              {%- if block.settings.subtitle -%}
+                <p class="h5">{{ block.settings.subtitle }}</p>
+              {%- endif -%}
+              {%- if block.settings.title != blank -%}
+                <p class="h2 nert">{{ block.settings.title }}</p>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="rte background-media-text__subtext">{{ block.settings.text }}</div>
+              {%- endif -%}
+    <div class="logo-img">
+    {%- if block.settings.image-1 != blank -%}
+<div class="new-logo-bar" {{ block.shopify_attributes }}>
+          {%- if block.settings.image-1 != blank -%}
+            {%- assign img_url = block.settings.image-1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="logo-bar__image lazyload"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720]"
+                data-aspectratio="{{ block.settings.image-1.aspect_ratio }}"
+                data-sizes="auto"
+                alt="{{ block.settings.image-1.alt }}">
+          {%- else -%}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+       {%- endif -%}
+    
+{%- if block.settings.image-2 != blank -%}
+<div class="new-logo-bar" {{ block.shopify_attributes }}>
+          {%- if block.settings.image-2 != blank -%}
+            {%- assign img_url = block.settings.image-2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="logo-bar__image lazyload"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720]"
+                data-aspectratio="{{ block.settings.image-2.aspect_ratio }}"
+                data-sizes="auto"
+                alt="{{ block.settings.image-2.alt }}">
+          {%- else -%}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+
+      <div class="new-logo-bar" {{ block.shopify_attributes }}>
+          {%- if block.settings.image-3 != blank -%}
+            {%- assign img_url = block.settings.image-3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="logo-bar__image lazyload"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720]"
+                data-aspectratio="{{ block.settings.image-3.aspect_ratio }}"
+                data-sizes="auto"
+                alt="{{ block.settings.image-3.alt }}">
+  
+          {%- endif -%}
+        </div>
+       {%- endif -%}
+    </div>
+
+              
+            </div>
+    
+          </div>
+        </div>
+
+      </div>  
+    
+    </div>
+  {%- endif -%}
+</div>
+
+<div class="background-media-text__spacer background-media-text--{{ block.settings.height }}"></div>
+  <p class="nr-">{{block.settings.answer}}</p>
+  <span class=new-image-grs-dr>
+ {%- if block.settings.image-main != blank -%}
+       <div class="image-graph">
+                  {%- assign img_url = block.settings.image-main | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ block.settings.image-main.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.image-main.alt }}">
+                </div>
+    {%- endif -%}
+   {%- if block.settings.image-main1 != blank -%}
+       <div class="image-graph">
+                  {%- assign img_url = block.settings.image-main1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ block.settings.image-main1.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.image-main1.alt }}">
+                </div>
+    {%- endif -%}
+  </span>
+  {%- if block.settings.question1 != blank -%}
+         <button class="tab-newle"> <h5>{{block.settings.question1}}</h5></button>
+        {%- endif -%}
+       <div class="panelle" style="color:black">
+  <p>{{block.settings.answer1}}</p>
+</div>
+  
+</div>
+     {% endfor %}
+
+  
+  </div> 
+  </div>
+   </div>
+
+{% schema %}
+  {
+    "name": "Tab Dropdown",
+     "class": "index-section",
+    "settings": [
+      
+    ],
+
+     "max_blocks": 10,
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+      "type": "text",
+      "id": "question",
+      "label": "heading"
+    },
+          {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading",
+        "default": "Impressive"
+      },
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Heading-image-b0x",
+        "default": "tabs"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text-image-box",
+        "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+      },
+       {
+            "type": "image_picker",
+            "id": "image-1",
+            "label": "logo-1"
+          },
+         {
+            "type": "image_picker",
+            "id": "image-2",
+            "label": "logo-2"
+          },
+         {
+            "type": "image_picker",
+            "id": "image-3",
+            "label": "logo-3"
+          },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "focal_point",
+        "label": "Image focal point",
+        "info": "Used to keep the subject of your photo in view.",
+        "default": "center",
+        "options": [
+          {
+            "value": "20% 0",
+            "label": "Top left"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "80% 0",
+            "label": "Top right"
+          },
+          {
+            "value": "20% 50%",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Middle"
+          },
+          {
+            "value": "80% 50%",
+            "label": "Right"
+          },
+          {
+            "value": "20% 100%",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "80% 100%",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Layout",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Text on left"
+          },
+          {
+            "value": "right",
+            "label": "Text on right"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "height",
+        "label": "block height",
+        "default": 550,
+        "min": 450,
+        "max": 750,
+        "step": 100,
+        "unit": "px"
+      },
+      {
+        "type": "checkbox",
+        "id": "framed",
+        "label": "Add frame",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "parallax",
+        "label": "Enable parallax",
+        "default": true
+      },
+         {
+      "type": "richtext",
+      "id": "answer",
+      "label": "text"
+    },
+         {
+        "type": "image_picker",
+        "id": "image-main",
+        "label": "Image-garph"
+      },
+          {
+        "type": "image_picker",
+        "id": "image-main1",
+        "label": "Image-garph"
+      },
+         {
+      "type": "text",
+      "id": "question1",
+      "label": "Citations Heading"
+    },
+      {
+      "type": "richtext",
+      "id": "answer1",
+      "label": "Citations text"
+    }
+
+    
+       ]
+     }
+  ],
+    "presets": [
+      {
+        "name": "Tab Dropdown",
+        "category": "Tab"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  span.new-image-grs-dr {
+    display: flex;
+}
+  .new-backimg{
+  width:80%;
+  }
+  .tab-new {
+   border-bottom: 1px solid #000 !important;
+  color: black;
+  cursor: pointer;
+  padding: 20px 45px 5px 5px;
+  width: 80%;
+  margin: auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+  button.tab-new {
+  display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+}
+
+  button.tab-new:after {
+      content: "\002B";
+    display: inline-block;
+    font: 14px/1 FontAwesome;
+    font-size: 20px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    vertical-align: top;
+    float: right;
+    clear: right;
+    font-weight: bold;
+    color: #fff;
+    font-size: 25px;
+    background: #10BBEF;
+    border-radius: 50%;
+    padding:3px 8px 3px 8px;
+   
+}
+  .panel {
+    display: none;
+  overflow: hidden;
+  color: white;
+    margin: auto;
+}
+/*   .background-media-text.new{
+    width:80%;
+  } */
+  .back-ma {
+    padding: 10%;
+}
+  .background-media-text__text.new-wid {
+    width: auto;
+    text-align:center;
+}
+  .new-logo-bar{
+    width:10%;
+    margin:10px;
+  }
+  .logo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .image-graph {
+    width: 70%;
+    margin: auto;
+}
+  .panel p strong {
+    text-align: left;
+    color: #10BBEF;
+}
+  @media only screen and (max-width: 825px) {
+.tab-new {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+    .new-backimg {
+    width: 100%;
+}
+    .panel {
+    width: 100%;
+}
+    
+    button.tab-new.active {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+    button.tab-new{
+     width: 100%;
+    text-align: center;
+    padding: 5px; 
+    }
+    .background-media-text.new {
+    width: 100%;
+}
+    .back-ma{
+      padding:0px;
+    }
+    .background-media-text__text.new-wid {
+    padding: 0px;
+}
+    .new-logo-bar {
+    width: 30%;
+    margin: 10px;
+}
+    div#shopify-section-template--19928598643005__20145b5f-dd39-40be-8344-b08042edae7e .panel {
+    width: 100%;
+}
+  }
+@media only screen and (max-width: 2340px) and (min-width: 1820px){
+     .new-backimg{
+    width: 65% !important;
+    }
+}
+  @media only screen and (max-width: 2840px) and (min-width: 2341px){
+     .new-backimg{
+    width: 55% !important;
+  }
+  }
+  div#shopify-section-template--19928598643005__20145b5f-dd39-40be-8344-b08042edae7e 
+</style>
+<style>
+   .tab-newle {
+  color: black;
+  cursor: pointer;
+  padding: 20px 45px 5px 5px;
+  width: 100%;
+  font-size: 20px;
+  transition: 0.4s;
+}
+  button.tab-newle {
+  display: flex;
+    align-items: center;
+}
+  button.tab-newle:after {
+      content: "\25bc";
+    display: inline-block;
+    font: 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    font-weight: bold;
+    color: #10BBEF;
+    font-size: 25px;
+       margin-top: -10px;
+    margin-left: 10px;
+}
+  .panelle {
+    display: none;
+  overflow: hidden;
+  color: white;
+}
+  .rte.background-media-text__subtext p {
+    padding: 0px 20px;
+    text-align: center;
+    margin: 0px;
+}
+  p.h2.nert {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+</style>
+
+<script>
+var acc = document.getElementsByClassName("tab-new");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+<script>
+var acc = document.getElementsByClassName("tab-newle");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panelle = this.nextElementSibling;
+    if (panelle.style.display === "block") {
+      panelle.style.display = "none";
+    } else {
+      panelle.style.display = "block";
+    }
+  });
+}
+</script>
+
+    

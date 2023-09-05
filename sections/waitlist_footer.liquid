@@ -1,0 +1,95 @@
+<section class="footer_sec sec-faq">
+    <div class="container nopad">
+    
+        <div class="row">
+ 
+         <div class="col-sm-6 footer-logo nopad">
+           <div class="footer-logo-inner">
+           <img src="{{  section.settings.footer-logo | img_url: 'master' }}">
+            </div> 
+           <div class="footer-faq-heading">
+              Frequently Asked Questions
+           </div>
+         </div>
+            <div class="col-sm-6 sec_faq_inner1">
+              <div class="sec_faq_inner">
+              <div class="sec_faq_inner_inner">
+              {% for block in section.blocks %}
+             <div class="set" id="set_{{  block.settings.footer-acocrdion-number }}">
+              <a href="javascript:void(0)">
+               {{  block.settings.footer-accordian-title }} 
+              </a>
+              <div class="content">
+                {{  block.settings.footer-accordian-paragraph }}
+              </div>
+            </div>
+               {% endfor %}
+            </div>
+               </div>
+              </div>
+
+        </div>
+    </div>
+</section>
+<section class="copyrights text-center">
+  {{ section.settings.copy_right_text }}
+</section>
+<script>
+$(document).ready(function(){
+	$("div#set_1 a").addClass("active");
+  $("div#set_1").addClass("active_tab");
+  $('div#set_1 .content').show();
+$('div#set_1 .content').addClass('open');
+});
+</script>
+{% schema %}
+  {
+    "name": "Waitlist Footer Accordian",
+         "settings": [
+          {
+            "type": "image_picker",
+            "id": "footer-logo",
+            "label": "Upload Footer Image"
+          },
+          {
+          "type": "text",
+          "id": "copy_right_text",
+          "label": "Add Copyright Text"
+          }
+        ],
+    "blocks":[
+      {
+        "type": "block",
+        "name": "waitlist-footer-accordian",
+        "settings": [
+          {
+          "type": "text",
+          "id": "footer-accordian-title",
+          "label": "Add Title"
+          },
+            {
+            "type": "richtext",
+            "id": "footer-accordian-paragraph",
+            "label": "Add Paragraph"
+          },
+          {
+            "type": "text",
+            "id": "footer-acocrdion-number",
+            "label": "Add Accordian Number"
+          }
+          
+        ]
+      }
+    ],
+    "presets": [{
+    "name": "Waitlist Footer Accordian",
+    "category": "Text"
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
